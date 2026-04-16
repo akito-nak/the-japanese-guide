@@ -50,6 +50,7 @@ This isn't a textbook. You don't read it cover to cover (unless you want to — 
 | [Dialects](culture/05-dialects.md) | Why Osaka people sound like they're always arguing (they're not) |
 | [Seasons & Nature](culture/06-seasons-and-nature.md) | Cherry blossoms, typhoons, and why season matters *constantly* |
 | [Traditional Arts](culture/07-traditional-arts.md) | Tea, kabuki, sumo, and the aesthetics that define Japan |
+| [Baseball & Sumo](culture/08-baseball-and-sumo.md) | The two national pastimes — 1,500 years of ritual meets America's game |
 
 ### Step 4 — Navigate real Japan
 

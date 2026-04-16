@@ -173,6 +173,156 @@ Katakana shows up *everywhere* in manga, anime, and games — often for stylisti
 
 ---
 
+## Stroke Order — Katakana
+
+The stroke order rules from hiragana apply equally here: top to bottom, left to right, horizontal before vertical, no lifting the pen mid-stroke. What changes is the *character of the strokes* — katakana is angular and architectural where hiragana is curved and flowing. Most katakana characters have **fewer strokes** (1–3) and **sharper direction changes** than their hiragana equivalents.
+
+---
+
+### Why Katakana Stroke Order Especially Matters
+
+The confusing pairs (ソ/ン, シ/ツ, ノ/ソ) are *only* distinguishable by stroke angle and direction. Knowing the correct stroke order makes these visually distinct:
+
+| Pair | How stroke order reveals the difference |
+|---|---|
+| **シ (shi) vs ツ (tsu)** | シ: two dots go ↙ left-to-right, main stroke goes ↗ upward. ツ: two dots go ↘ right-to-left, main stroke goes ↓ downward |
+| **ソ (so) vs ン (n)** | ソ: short stroke goes ↘ then long stroke sweeps ↘↗. ン: short stroke goes ↗ then long stroke sweeps ↙ |
+| **ノ (no) vs ソ (so)** | ノ is **1 stroke** going ↘. ソ is **2 strokes**: a short mark then a sweep |
+
+Memorizing these as stroke-sequence patterns is more reliable than memorizing them as pictures.
+
+---
+
+### Vowels (ア行)
+
+**ア (a) — 2 strokes**
+
+```
+   ①─ ↘
+   ②─ ↓
+```
+① Diagonal going upper-left to lower-right  
+② Horizontal right, then turns sharply ↓  
+
+**イ (i) — 2 strokes**
+① Short diagonal ↙  
+② Longer diagonal ↙ (taller, parallel, further right)  
+
+**ウ (u) — 3 strokes**
+① Short horizontal → at top  
+② Left vertical ↓  
+③ Right vertical ↓ (the two verticals are joined by ①)  
+
+**エ (e) — 3 strokes**
+① Horizontal → (top)  
+② Vertical ↓ (center)  
+③ Horizontal → (bottom)  
+
+**オ (o) — 3 strokes**
+① Horizontal →  
+② Vertical ↓ (crosses ①)  
+③ Diagonal ↙ starting from right of ①  
+
+---
+
+### K-Row (カ行)
+
+| Char | Count | Key notes |
+|---|---|---|
+| カ (ka) | 2 | ①→↓ hook shape ②↙ diagonal crossing ① |
+| キ (ki) | 3 | ①→ ②→ (two horizontals) ③↓ vertical crossing both |
+| ク (ku) | 2 | ①↙ short left ②→↙ sweeps right then curves ↙ |
+| ケ (ke) | 3 | ①↓ ②→↙ ③→ |
+| コ (ko) | 2 | ①→↓ (top and right side, L-shape) ②→ (bottom) |
+
+---
+
+### S-Row (サ行)
+
+| Char | Count | Key notes |
+|---|---|---|
+| サ (sa) | 3 | ①→ ②→ ③↓ crossing both (resembles a table) |
+| シ (shi) | 3 | ①↙ ②↙ (both dots go down-left) ③↗ long stroke going up-right |
+| ス (su) | 2 | ①→↙ (top, curves down-left) ②↙ small hook at bottom |
+| セ (se) | 2 | ①→↓ (top and right) ②→ (long horizontal left through ①) |
+| ソ (so) | 2 | ①↘ short diagonal down-right ②↘↗ long sweep down then up-right |
+
+> **シ vs ツ visual key:** Tilt シ and it reads like 'shi' in English — the three strokes angle *upward* to the right. Tilt ツ and it reads like 'tsu' — the strokes angle *downward*.
+
+---
+
+### T-Row (タ行)
+
+| Char | Count | Key notes |
+|---|---|---|
+| タ (ta) | 3 | ①→ ②↙ ③↓ hooks left at base |
+| チ (chi) | 3 | ①→ ②→ ③↓ hooks left (like タ with horizontal ②) |
+| ツ (tsu) | 3 | ①↘ ②↘ (both dots go down-right) ③↓ long stroke going down |
+| テ (te) | 3 | ①→ ②→ (shorter) ③↓ sweeping ↙ at base |
+| ト (to) | 2 | ①↓ ②→ short horizontal from right side of ① |
+
+---
+
+### N-Row (ナ行)
+
+| Char | Count | Key notes |
+|---|---|---|
+| ナ (na) | 2 | ①→ ②↙ long diagonal (crosses ①) |
+| ニ (ni) | 2 | ①→ (short, top) ②→ (longer, bottom) |
+| ヌ (nu) | 2 | ①→↙ ②→↙↺ loops at lower-right |
+| ネ (ne) | 4 | ①→ ②↓ ③↙ ④↙↺ |
+| ノ (no) | **1** | Single diagonal: ↘ from upper-left to lower-right |
+
+---
+
+### H-Row (ハ行)
+
+| Char | Count | Key notes |
+|---|---|---|
+| ハ (ha) | 2 | ①↙ (left, slightly shorter) ②↙ (right, longer) — like an open book |
+| ヒ (hi) | 2 | ①↓ ②→ (hooks from upper-right of ① to lower-right) |
+| フ (fu) | 2 | ①→↓ (top and right) ②↙ single diagonal from upper-right |
+| ヘ (he) | **1** | Identical to hiragana へ: ↗ then ↘ |
+| ホ (ho) | 4 | ①→ ②↓ (crosses ①) ③↙ ④↙ (two matching diagonals) |
+
+---
+
+### M, Y, R, W Rows
+
+| Char | Count | Key notes |
+|---|---|---|
+| マ (ma) | 2 | ①→↓ ②↙ crossing ① |
+| ミ (mi) | 3 | ①→ ②→ ③→ (three horizontals, each slightly longer) |
+| ム (mu) | 2 | ①↙↓ ②→↙ |
+| メ (me) | 2 | ①↘ ②↙ (they cross in the center) |
+| モ (mo) | 3 | ①→ ②→ ③↓→ (T-shape at bottom) |
+| ヤ (ya) | 3 | ①→↓ ②↗ ③→ |
+| ユ (yu) | 2 | ①→↓ (right angle) ②→ (bottom) |
+| ヨ (yo) | 3 | ①→↓ (right side) ②→ (middle) ③→ (bottom) |
+| ラ (ra) | 2 | ①→↓ ②↙↺ |
+| リ (ri) | 2 | ①↙ hook up ②↓ hooks left at base |
+| ル (ru) | 2 | ①↘↓ ②→↙ |
+| レ (re) | **1** | Single: ↓ then curves ↗ at base |
+| ロ (ro) | 3 | ①↓ ②→↓ ③→ (a rectangle — draw left, right, then close at bottom) |
+| ワ (wa) | 2 | ①→↓ ②↙ |
+| ヲ (wo) | 3 | ①→ ②→↓ ③→↙ (nearly obsolete) |
+| ン (n) | 2 | ①↗ short diagonal up-right ②↙ long sweep down-left, curves up |
+
+> **ン vs ソ final rule:** ン's first stroke goes *up-right* (↗). ソ's first stroke goes *down-right* (↘). This single difference is the key.
+
+---
+
+### Animated Stroke Order Resources
+
+| Resource | Notes |
+|---|---|
+| [Jisho.org](https://jisho.org) | Animated stroke order for all katakana and kanji |
+| [KanjiAlive](https://kanjialive.com) | Clear animations with audio |
+| [Tofugu Katakana Guide](https://www.tofugu.com/japanese/katakana/) | Full illustrated stroke order guide |
+| [Kakijun](https://kakijun.jp) | Japanese stroke order reference |
+
+---
+
 ## Practice Strategy
 
 Because katakana represents the same sounds as hiragana, you already know the phonetics — you just need to recognize new shapes. This makes katakana **faster to learn** for most people.

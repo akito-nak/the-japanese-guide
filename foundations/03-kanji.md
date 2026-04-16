@@ -148,32 +148,32 @@ The **Jōyō kanji** (常用漢字) list — the government-approved "common use
 
 There are fierce opinions in the Japanese learning community. Here's an honest breakdown:
 
-### Method 1: Remembering the Kanji (RTK) by James Heisig
+### Method 1: [Remembering the Kanji (RTK)](https://www.amazon.com/Remembering-Kanji-Complete-Japanese-Characters/dp/0824835921) by James Heisig
 Learn all 2,200 kanji meanings using imaginative stories — no readings. Just shapes and meanings.
 - **Pros:** Fast recognition, memorable stories, covers all joyo kanji
 - **Cons:** You can recognize kanji but can't read them aloud. Readings must be learned separately.
 - **Best for:** Learners who want to read (not speak) Japanese first
 
-### Method 2: WaniKani (wanikani.com)
+### Method 2: [WaniKani](https://www.wanikani.com)
 SRS (spaced repetition system) that teaches radicals → kanji → vocabulary in a structured order.
 - **Pros:** Teaches both meaning AND readings together, vocabulary reinforces kanji
 - **Cons:** Paid subscription, takes 1–2 years to complete, you follow their order not your own
 - **Best for:** Consistent learners who want structure
 
-### Method 3: KKLC (Kodansha Kanji Learner's Course)
+### Method 3: [KKLC (Kodansha Kanji Learner's Course)](https://www.kodansha.us/product/the-kodansha-kanji-learners-course/)
 2,300 kanji organized by visual similarity and meaning clusters.
 - **Pros:** Great visual groupings, comprehensive, standalone book
 - **Cons:** Dense, requires discipline
 - **Best for:** Self-studiers who want a physical book
 
 ### Method 4: Context-first Learning
-Learn kanji through vocabulary. Read real Japanese, look up kanji as you encounter them, build Anki decks from your own reading.
+Learn kanji through vocabulary. Read real Japanese, look up kanji as you encounter them, build [Anki](https://apps.ankiweb.net) decks from your own reading.
 - **Pros:** Only learn what's actually relevant, high retention from real context
 - **Cons:** Chaotic, coverage gaps, requires significant effort to set up
 - **Best for:** Intermediate learners who read a lot already
 
 ### The Honest Answer
-Most successful learners combine methods: use WaniKani or RTK to build a recognition base, then supplement with reading real material. The kanji you encounter in your specific interest area (manga, news, business) will stick fastest.
+Most successful learners combine methods: use [WaniKani](https://www.wanikani.com) or RTK to build a recognition base, then supplement with reading real material. The kanji you encounter in your specific interest area (manga, news, business) will stick fastest.
 
 ---
 
@@ -220,7 +220,7 @@ Two kanji together create new meanings — often logical, sometimes poetic, occa
 
 2. **Write them by hand occasionally.** You don't need to write fluently, but physically drawing the strokes builds neural pathways that typing doesn't.
 
-3. **Use SRS (Spaced Repetition Software).** Anki or WaniKani optimizes *when* you review, so you don't waste time on cards you already know.
+3. **Use SRS (Spaced Repetition Software).** [Anki](https://apps.ankiweb.net) or [WaniKani](https://www.wanikani.com) optimizes *when* you review, so you don't waste time on cards you already know.
 
 4. **Read things you actually enjoy.** Manga kanji stick because you care what happens next.
 
