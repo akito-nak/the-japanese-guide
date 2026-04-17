@@ -26,20 +26,206 @@ Kanji resolve ambiguity instantly. They're one of the reasons Japanese can be re
 ## Anatomy of a Kanji
 
 ### Radicals (部首 — bushu)
-Every kanji is built from components called **radicals**. Radicals are the building blocks — 214 in the traditional system. Learning them makes kanji recognition much faster because you stop seeing them as random squiggles and start seeing **modular parts**.
 
-| Radical | Meaning | Shows up in... |
+Every kanji is built from components called **radicals**. There are 214 in the traditional Kangxi system. Learning them transforms kanji from "random squiggles" into **modular, decodable parts** — you start seeing the logic embedded in the shapes.
+
+Radicals serve two purposes:
+1. **Dictionary lookup** — kanji are organized by their primary radical in traditional dictionaries
+2. **Semantic hinting** — the radical often (not always) gives you a clue about meaning
+
+---
+
+#### Nature & Elements
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 日 | 日 | sun / day | 明 (bright), 時 (time), 早 (early), 晴 (clear sky) |
+| 月 | 月 | moon / month | 朝 (morning), 期 (period), 服 (clothing) |
+| 山 | 山 | mountain | 岩 (rock), 峰 (peak), 岸 (shore) |
+| 水/氵 | 氵(3 drops) | water | 海 (sea), 泳 (swim), 洗 (wash), 清 (clear) |
+| 火/灬 | 灬 (4 dots at base) | fire | 焼 (burn), 炎 (flame), 熱 (heat), 照 (shine) |
+| 木 | 木 | tree / wood | 森 (forest), 机 (desk), 板 (plank), 根 (root) |
+| 土 | 土 | earth / soil | 地 (ground), 場 (place), 城 (castle), 塔 (tower) |
+| 石 | 石 | stone | 岩 (rock), 砂 (sand), 硬 (hard) |
+| 草/艸/艹 | 艹 (top grass shape) | plant | 花 (flower), 草 (grass), 葉 (leaf), 茶 (tea) |
+| 風 | 风 | wind | 風 itself is the main radical form |
+| 雨 | 雨 | rain | 雪 (snow), 雷 (thunder), 電 (electricity) |
+
+---
+
+#### People & Body
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 人/亻 | 亻(left side) | person | 休 (rest), 作 (make), 使 (use), 体 (body) |
+| 女 | 女 | woman | 好 (like), 姉 (sister), 妹 (younger sister), 嫌 (dislike) |
+| 子 | 子 | child | 学 (study), 字 (character), 孫 (grandchild) |
+| 手/扌 | 扌(left side) | hand | 持 (hold), 打 (hit), 押 (push), 技 (skill), 指 (finger) |
+| 口 | 口 | mouth | 話 (talk), 叫 (shout), 歌 (sing), 味 (taste), 唇 (lip) |
+| 目 | 目 | eye | 見 (see), 眠 (sleep), 盲 (blind), 眼 (eyeball) |
+| 耳 | 耳 | ear | 聞 (hear/ask), 聴 (listen carefully), 職 (occupation) |
+| 足/⻊ | 足 | foot / leg | 跳 (jump), 踏 (step on), 距 (distance) |
+| 心/忄 | 忄(left side) | heart / feelings | 愛 (love), 悲 (sad), 怒 (angry), 思 (think), 忘 (forget) |
+| 骨 | 骨 | bone | 骸 (skeleton), 髄 (marrow) |
+
+---
+
+#### Actions & Concepts
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 言/訁 | 訁(left side) | speech / words | 話 (talk), 読 (read), 語 (language), 詩 (poem) |
+| 力 | 力 | power / effort | 勉 (study hard), 動 (move), 助 (help), 加 (add) |
+| 刀/刂 | 刂(right side) | sword / cut | 切 (cut), 別 (separate), 判 (judge), 剣 (sword) |
+| 糸/纟 | 糸 | thread / fabric | 絵 (picture), 結 (tie), 続 (continue), 紙 (paper) |
+| 金/釒 | 釒(left side) | metal / gold | 銀 (silver), 鉄 (iron), 銅 (copper), 鋭 (sharp) |
+| 食/飠 | 飠(left side) | food / eat | 飯 (cooked rice), 飲 (drink), 飢 (hunger) |
+| 車 | 車 | vehicle | 転 (roll/turn), 輸 (transport), 軽 (light) |
+| 走 | 走 | run | 起 (rise), 越 (exceed), 赴 (go toward) |
+| 見 | 見 | see / view | 現 (appear), 規 (rule), 覚 (memorize) |
+
+---
+
+#### Buildings & Structures
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 門 | 門 | gate | 聞 (hear), 間 (interval/between), 開 (open), 閉 (close) |
+| 宀 | 宀 (roof shape) | roof / house | 家 (house), 室 (room), 宿 (lodging), 安 (safe/cheap) |
+| 囗 | □ (enclosure) | enclosure | 国 (country), 園 (garden), 図 (diagram), 回 (round) |
+| 土 | 土 | earth (also used for buildings) | 基 (foundation), 壁 (wall), 堂 (hall) |
+
+---
+
+#### Animals
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 魚 | 魚 | fish | 鯛 (sea bream), 鮭 (salmon), 鮪 (tuna) |
+| 鳥 | 鳥 | bird | 鶏 (chicken), 鴨 (duck), 鷹 (hawk) |
+| 虫 | 虫 | insect (also reptiles, worms) | 蛇 (snake), 蛙 (frog), 蝶 (butterfly) |
+| 馬 | 馬 | horse | 騎 (ride), 駅 (station), 驚 (surprised) |
+| 犬/犭 | 犭(left side) | dog | 猫 (cat), 狼 (wolf), 独 (alone), 猿 (monkey) |
+
+---
+
+#### Important Modifiers
+
+| Radical | Form | Meaning | Example kanji |
+|---|---|---|---|
+| 大 | 大 | large | 太 (fat/thick), 央 (center), 奥 (deep inside) |
+| 小 | 小 | small | 少 (few), 尖 (pointed), 省 (save/omit) |
+| 不 | 不 | not / negative | 不満 (dissatisfied), 不安 (uneasy), 不思議 (mysterious) |
+| 又 | 又 | again / right hand | 友 (friend), 取 (take), 受 (receive), 反 (oppose) |
+| 寸 | 寸 | unit / measure | 対 (oppose/versus), 寺 (temple), 専 (exclusive) |
+
+---
+
+> **Radical vs. component:** Not every part of a kanji is its "official" radical (部首). The radical is specifically the part used to categorize the kanji in a dictionary. But visually, *any* recognizable sub-component helps you remember the whole. WaniKani, for example, uses its own set of "radicals" (which it calls components) that are optimized for memory, not dictionary lookup — both approaches are valid.
+
+---
+
+## Stroke Order for Kanji
+
+The same seven rules from hiragana apply to kanji. Here they are again with kanji-specific examples:
+
+### The Rules, Applied to Kanji
+
+| Rule | Kanji Example | How it applies |
 |---|---|---|
-| 氵(water) | water-related | 海 (sea), 川 (river), 泳 (swim), 洗 (wash) |
-| 木 (tree) | wood/tree-related | 森 (forest), 林 (woods), 机 (desk), 椅 (chair) |
-| 口 (mouth) | speaking/mouth | 話 (talk), 叫 (shout), 食 (eat), 歌 (sing) |
-| 人/亻 (person) | people/actions | 休 (rest), 作 (make), 使 (use), 体 (body) |
-| 心/忄 (heart) | emotions | 愛 (love), 思 (think), 悲 (sad), 怒 (angry) |
-| 日 (sun/day) | time, brightness | 明 (bright), 時 (time), 早 (early), 星 (star) |
-| 女 (woman) | gender-related (historically) | 好 (like), 姉 (sister), 母 (mother) |
-| 手/扌 (hand) | hand actions | 持 (hold), 押 (push), 打 (hit), 技 (skill) |
+| **Top to bottom** | 三 (three) | Three horizontal strokes: top → middle → bottom |
+| **Left to right** | 川 (river) | Three verticals: left → center → right |
+| **Horizontal before vertical** | 十 (ten) | → then ↓ — the cross horizontal first |
+| **Diagonal right-to-left before left-to-right** | 人 (person) | ノ first, then the rightward stroke |
+| **Center before sides** | 小 (small) | Center vertical first, then left dot, then right dot |
+| **Enclosure before contents, close last** | 国 (country) | Left-top-right of box → 玉 inside → close at bottom |
+| **Don't lift mid-stroke** | Any curved stroke | A stroke is one continuous line, however complex |
 
-> **Tip:** When you learn a new kanji, identify its radical first. It gives you a semantic hook and a memory anchor.
+---
+
+### The Enclosure Rule in Detail
+
+The enclosure rule (Rule 6) appears constantly in kanji. Three-sided enclosures work differently from four-sided ones:
+
+**Four-sided enclosure (口-type):**
+① Left side ↓
+② Top + right side: → then ↓
+③ Contents (if any)
+④ Bottom → (closes the box)
+
+**Three-sided enclosure opening downward (凸-type / 区-type):**
+① Top
+② Left side ↓
+③ Contents
+④ Right side ↓ (last — you "seal" right-to-left)
+
+**Three-sided enclosure opening rightward (匚-type):**
+① Top →
+② Left side ↓
+③ Bottom →
+④ Contents fit inside (like 医)
+
+---
+
+### Stroke Order Examples — Common Kanji
+
+**日 (sun/day) — 4 strokes**
+```
+①│ ②─│  ③── ④──
+```
+① Left vertical ↓ (with upward hook at top)  
+② Top + right: → then ↓  
+③ First internal horizontal →  
+④ Bottom horizontal →  
+
+**山 (mountain) — 3 strokes**
+```
+②│ ①── ③│
+```
+① Center vertical ↓ (tallest)  
+② Left short vertical ↓  
+③ Right short vertical ↓  
+*Center first — Rule 5*
+
+**木 (tree) — 4 strokes**
+```
+  ① ─
+  ②↓
+③↙  ④↘
+```
+① Horizontal →  
+② Vertical ↓ (crosses ①)  
+③ Left diagonal ↙  
+④ Right diagonal ↘  
+
+**国 (country) — 8 strokes**
+① ↓ left wall  
+② →↓ top + right wall  
+③–⑦ 玉 inside: horizontal, vertical, horizontal, dot  
+⑧ → bottom to close  
+
+---
+
+### Stroke Count Reference (N5 Kanji)
+
+| 1–2 strokes | 3–4 strokes | 5–6 strokes | 7–8 strokes |
+|---|---|---|---|
+| 一 二 人 入 八 | 三 山 川 口 土 大 小 女 子 | 本 目 耳 白 田 生 出 右 左 | 花 見 言 足 車 来 男 |
+| 力 刀 十 | 日 月 木 火 水 | 立 石 先 名 早 | 学 国 長 図 |
+
+---
+
+### Stroke Order Resources
+
+| Resource | Notes |
+|---|---|
+| [Jisho.org](https://jisho.org) | Search any kanji → animated stroke order with numbering |
+| [KanjiAlive](https://kanjialive.com) | Clean animations, free |
+| [Kakijun](https://kakijun.jp) | Japanese stroke order reference site |
+| [Kanji Stroke Order Font](https://nihilist.org.uk/Nihongoresources/) | Downloadable font that shows numbers on each stroke |
+| [WaniKani](https://www.wanikani.com) | Teaches stroke order context through radical components |
+
+---
 
 ---
 
@@ -174,6 +360,178 @@ Learn kanji through vocabulary. Read real Japanese, look up kanji as you encount
 
 ### The Honest Answer
 Most successful learners combine methods: use [WaniKani](https://www.wanikani.com) or RTK to build a recognition base, then supplement with reading real material. The kanji you encounter in your specific interest area (manga, news, business) will stick fastest.
+
+---
+
+## How to Use WaniKani — A Complete Beginner's Guide
+
+[WaniKani](https://www.wanikani.com) is a web-based kanji learning system built around spaced repetition. It teaches approximately 2,000 kanji and 6,000 vocabulary words across 60 levels. The first three levels are free; beyond that it requires a subscription.
+
+### The Core System: Radicals → Kanji → Vocabulary
+
+WaniKani teaches in three layers:
+
+| Layer | What it is | Example |
+|---|---|---|
+| **Radical** | A named visual component | 氵= "tsunami" (WK's name for the water radical) |
+| **Kanji** | Built from radicals, taught with meaning + readings | 海 (sea) — uses 氵+ 母 component |
+| **Vocabulary** | Real words using the kanji you learned | 海 → 海外 (overseas), 日本海 (Sea of Japan) |
+
+You cannot unlock kanji until you've learned their component radicals. You cannot unlock vocabulary until you know the relevant kanji. The system is deliberately sequential.
+
+---
+
+### The SRS Levels (Spaced Repetition System)
+
+Every item you learn moves through a progression based on how accurately you answer reviews:
+
+| Level | Review interval | What it means |
+|---|---|---|
+| **Apprentice 1** | 4 hours | Just learned — high priority |
+| **Apprentice 2** | 8 hours | Still fragile — review soon |
+| **Apprentice 3** | ~1 day | Building |
+| **Apprentice 4** | ~2 days | Getting stable |
+| **Guru 1** | ~1 week | Solid short-term memory |
+| **Guru 2** | ~2 weeks | Moving to long-term |
+| **Master** | ~1 month | Long-term |
+| **Enlightened** | ~4 months | Near-permanent |
+| **Burned** | — | Permanent — no more reviews |
+
+**Answer incorrectly** and the item drops back levels. This is intentional — the system is self-correcting.
+
+---
+
+### What a Typical Day Looks Like
+
+**Morning (10–20 min):** Do your reviews first. WaniKani queues reviews based on the SRS intervals — they appear when you're supposed to see them, not when it's convenient. Skipping reviews causes a backlog.
+
+**Afternoon (5–15 min):** Check for new lessons. Lessons introduce new items. Don't do more than **10–15 new lessons per day** — each new lesson creates 8 reviews over the next two days. New learners often do 50 lessons at once and then drown in reviews two days later.
+
+**Before bed (5–10 min):** Second review session. Because Apprentice 1 reviews come back in 4 hours, doing lessons in the morning and reviews in the evening keeps the cycle healthy.
+
+---
+
+### Common WaniKani Mistakes
+
+| Mistake | Why it hurts | What to do instead |
+|---|---|---|
+| **Rushing lessons** | Floods your review queue in 1–2 days | Cap at 10–15 new lessons/day |
+| **Skipping vocabulary lessons** | Vocab reinforces kanji — skipping it weakens retention | Do all vocabulary unlocked for each level |
+| **Ignoring radicals** | Radicals are the memory hooks for kanji | Learn radical names seriously, even silly ones |
+| **Cheating reviews** | Marking wrong answers as correct destroys the SRS logic | Answer honestly — the algorithm needs accurate data |
+| **Stopping at level 20** | Very common stopping point (free levels are gone, motivation dips) | Set a consistent daily habit before the free trial ends |
+| **Only doing WaniKani** | WaniKani teaches recognition, not usage | Read real Japanese alongside WaniKani from day one |
+
+---
+
+### WaniKani Tips from Experienced Users
+
+- **Use the [Jisho](https://jisho.org) companion:** When you learn a kanji on WK, look it up on Jisho to see more real words using it.
+- **The mnemonic matters:** WaniKani provides a story for each kanji. Read it carefully — don't just memorize the answer. The story is the point.
+- **Leeches are real:** Some items will keep getting wrong over and over. These "leeches" need special attention. Use a leech trainer script or write the item out by hand several times.
+- **Level up takes ~7 days** at the fastest pace. Don't try to speed-run — the SRS intervals exist for a reason.
+- **The [WaniKani Community](https://community.wanikani.com)** is genuinely helpful and has extensive resources including scripts, study guides, and encouragement.
+
+---
+
+## How to Use Anki — A Complete Beginner's Guide
+
+[Anki](https://apps.ankiweb.net) is free, open-source flashcard software built around spaced repetition. Unlike WaniKani, Anki is a blank tool — it doesn't come with Japanese content. You provide the cards, or download a pre-made deck.
+
+### Getting Started
+
+1. **Download Anki** from [apps.ankiweb.net](https://apps.ankiweb.net) — free for desktop (Windows/Mac/Linux) and Android; the iOS app costs a one-time fee.
+2. **Find a deck** or make your own (see below).
+3. **Do your reviews every day.** Anki's power is consistency — missing days causes a backlog that compounds quickly.
+
+---
+
+### Finding Japanese Decks
+
+| Deck | What it contains | Best for |
+|---|---|---|
+| [Core 2000/6000](https://ankiweb.net/shared/info/1237389412) | 2,000–6,000 most frequent Japanese words with audio | General vocabulary building |
+| [JLPT N5–N1 Vocab](https://ankiweb.net/shared/decks/jlpt) | Vocabulary organized by JLPT level | Exam preparation |
+| [Kanji Kentei / RTK](https://ankiweb.net/shared/info/1862058740) | Kanji with meanings and readings | Kanji recognition |
+| [Tango N5 / N4](https://ankiweb.net/shared/info/1679429599) | Sentence-based cards for JLPT levels | Reading + vocab together |
+
+Search [ankiweb.net/shared/decks/japanese](https://ankiweb.net/shared/decks/japanese) for the full library.
+
+---
+
+### Key Settings to Configure
+
+Anki's defaults are not optimized for heavy vocabulary learning. Adjust these in **Deck Options**:
+
+| Setting | Default | Recommended | Why |
+|---|---|---|---|
+| **New cards per day** | 20 | 10–15 | More than 20/day creates an unsustainable review load |
+| **Maximum reviews/day** | 100 | 200–300 | Low caps cause cards to pile up |
+| **Graduating interval** | 1 day | 1 day | Fine as-is |
+| **Easy interval** | 4 days | 4 days | Fine as-is |
+| **New interval** (lapse) | 0% | 20% | When you fail a card, don't reset it to zero |
+| **Leech threshold** | 8 | 5 | Flag problem cards sooner |
+
+---
+
+### Two Card Types: Choose Your Strategy
+
+**Vocabulary cards** — front: Japanese word, back: reading + meaning
+```
+Front: 電車
+Back:  でんしゃ (densha) — electric train
+```
+Fast to review, covers a lot of ground quickly. Risk: you may recognize the card without truly knowing the word in context.
+
+**Sentence cards** — front: sentence with target word, back: reading + meaning of sentence
+```
+Front: 毎日電車で通勤しています。
+Back:  I commute by train every day.
+       電車 (densha) = electric train
+```
+Slower, but far higher retention and transfers better to real reading. Recommended for intermediate learners.
+
+**Best approach:** Start with vocabulary cards at beginner level. As your vocabulary grows, switch to mining sentence cards from things you're actually reading (see below).
+
+---
+
+### Sentence Mining — The Advanced Technique
+
+"Mining" means creating Anki cards directly from Japanese content you're consuming (manga, news articles, anime subtitles). Each card uses the original sentence as context.
+
+**Workflow:**
+1. Read/watch Japanese content
+2. Encounter an unknown word that's important
+3. Look it up with [Yomitan](https://github.com/themoeway/yomitan) (browser extension — hover for instant definition)
+4. Yomitan can send the word + sentence directly to Anki with one click
+5. Review the card daily
+
+This approach creates cards from vocabulary you already have context for — dramatically improving retention compared to pre-made decks.
+
+---
+
+### How to Review Properly
+
+**The honest answer rule:** Mark a card as "Again" if you hesitated more than 2–3 seconds, made any error, or recognized it but couldn't produce it confidently. Anki only works if the data is accurate.
+
+| Button | When to press it |
+|---|---|
+| **Again** | Wrong, hesitated, or only vaguely recognized |
+| **Hard** | Got it, but it felt difficult |
+| **Good** | Normal correct answer |
+| **Easy** | Instant recall, felt obvious |
+
+Most reviews should be "Good" or "Again." If you're pressing "Easy" on everything, your new card rate is too low.
+
+---
+
+### The Cardinal Rule
+
+**Do your reviews every day.** Not every few days. Not when you feel like it. Every day.
+
+Anki's spaced repetition only works with consistent intervals. A 10-minute daily review is worth far more than a 2-hour catch-up session on the weekend. Reviews missed today will reappear tomorrow, and the day after — the backlog compounds exponentially after just 3–4 missed days.
+
+Set a fixed time (morning coffee, commute, before bed) and protect it.
 
 ---
 
