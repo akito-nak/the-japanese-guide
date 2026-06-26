@@ -415,6 +415,6 @@ Together, they hold the country's sporting identity between them: one looking ou
 
 ---
 
-[← Traditional Arts](07-traditional-arts.md) · [🏠 Home](../README.md) · [Trains & Transit →](../practical/trains-and-transit.md)
+[← Traditional Arts](07-traditional-arts.md) · [🏠 Home](../README.md) · [Vtubers & Streaming →](09-vtuber-and-streaming.md)
 
 <!-- nav-footer:end -->

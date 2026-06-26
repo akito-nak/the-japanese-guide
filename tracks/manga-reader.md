@@ -130,6 +130,36 @@ Manga sound effects are not real Japanese vocabulary — but they're everywhere,
 
 ---
 
+### The Sound of Silence — シーン
+
+The single most famous manga sound effect represents **no sound at all**: **シーン** (or 「シ〜ン」). A quiet room, a stunned pause, an awkward silence — Japanese "hears" silence and writes it down. Once you notice it, you'll see it everywhere.
+
+---
+
+## Furigana Wordplay — Two Meanings at Once
+
+Manga has a trick that doesn't exist in English: making the **furigana say something different from the kanji underneath**. You read both simultaneously — the kanji gives the literal/written meaning, the small reading gives what's actually *spoken* or felt.
+
+| Written | Furigana | Literal meaning | The effect |
+|---|---|---|---|
+| 本気 | マジ (maji) | "seriousness" | Formal kanji + slangy spoken voice, at once |
+| 機械鎧 | オートメイル (Automail) | "machine armor" | English ruby names the thing (*Fullmetal Alchemist*) |
+| 負けて死ね | バイツァ・ダスト (Bites the Dust) | "lose and die" | Kanji = lethal command; English = the attack's name (*JoJo*) |
+| 親友 | ライバル (rival) | "close friend" | A contrasting ruby compresses a whole relationship into one word |
+| 永遠 | とわ | "eternity" (vs えいえん) | A softer, more poetic reading |
+
+This is the creative extreme of **義訓 (gikun)** — improvised, meaning-based readings. Watch for it especially in shōnen battle manga, where technique names get dramatic English or German ruby for a "cool, exotic" feel.
+
+> **Tip:** when the furigana and kanji disagree, that's not a misprint — it's the author handing you *two* pieces of information. Read the kanji for meaning, the ruby for voice.
+
+---
+
+## A Note on Character Speech (役割語)
+
+Manga characters don't talk like real people — they talk like *types*. The wise old master ending sentences in 〜じゃ, the heiress in 〜ですわ, the tough guy saying 俺 and 〜ぜ: that's **role language (役割語)**, and it's a whole system worth learning. It will tell you who a character is from their first line. See the dedicated **[Role Language](../foundations/10-role-language.md)** page.
+
+---
+
 ## Grammar Patterns Common in Manga
 
 Manga uses extremely casual Japanese, heavy contractions, and character-specific speech:

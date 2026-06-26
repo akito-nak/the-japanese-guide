@@ -260,6 +260,6 @@ When in doubt: if they're doing it, elevate. If you're doing it, humble.
 
 ---
 
-[← Polite Japanese](03-polite-japanese.md) · [🏠 Home](../README.md) · [Culture & Norms →](../culture/01-culture-and-norms.md)
+[← Polite Japanese](03-polite-japanese.md) · [🏠 Home](../README.md) · [Modern Keigo →](05-modern-keigo.md)
 
 <!-- nav-footer:end -->

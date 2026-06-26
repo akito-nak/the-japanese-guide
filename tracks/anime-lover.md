@@ -79,6 +79,8 @@ Different anime character archetypes use different speech patterns:
 | Maid character | Ultra-polite performance | 〜でございます, お嬢様 |
 | Yankii/delinquent | Extra rough masculine | オレ、〜じゃねぇか、heavy contractions |
 
+This whole phenomenon — characters speaking as recognizable *types* rather than as real people — is called **役割語 (role language)**, and it's one of the highest-leverage things an anime learner can study. It tells you who a character is from their first line, and it warns you which speech patterns *not* to copy into real life. See the dedicated **[Role Language](../foundations/10-role-language.md)** page.
+
 ---
 
 ## Anime By Difficulty Level

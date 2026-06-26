@@ -243,6 +243,6 @@ Japanese taxis are clean, reliable, and expensive:
 
 ---
 
-[← Baseball & Sumo](../culture/08-baseball-and-sumo.md) · [🏠 Home](../README.md) · [Cities & Regions →](cities-and-regions.md)
+[← Vtubers & Streaming](../culture/09-vtuber-and-streaming.md) · [🏠 Home](../README.md) · [Cities & Regions →](cities-and-regions.md)
 
 <!-- nav-footer:end -->

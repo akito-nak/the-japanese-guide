@@ -162,6 +162,30 @@ Language moves fast. These are current as of the mid-2020s:
 
 ---
 
+## Kaomoji (顔文字) — Japan's Sideways-Proof Emoticons
+
+Long before emoji, Japan had **顔文字 (kaomoji)** — emoticons you read **upright**, no head-tilting required. Western emoticons are sideways and built around the *mouth*: `:)` `:(`. Kaomoji face you directly and are built around the **eyes**: `(^_^)`, `(T_T)`, `(・・)`. (Linguists link this to the fact that East-Asian readers weight the eyes when reading emotion, Westerners the mouth.) They're far more expressive — arms, sweat drops, and whole flailing bodies are fair game.
+
+| Category | Examples | Emotion |
+|---|---|---|
+| Happy | `(^_^)` `(^ω^)` `\(^o^)/` | smiling, celebrating |
+| Sad | `(T_T)` `(;_;)` `(つ﹏⊂)` | crying, sorrow |
+| Anger | `ヽ(｀Д´)ﾉ` `(╬ Ò﹏Ó)` | rage, glaring |
+| Sweat/awkward | `(^_^;)` `(-_-;)` | nervous — the `;` is a sweat drop |
+| Surprise | `(O_O)` `Σ(°△°\|\|\|)` | shock |
+| Love | `(♡^▽^♡)` `(づ｡◕‿‿◕｡)づ` | affection, a hug |
+| Shrug | `¯\_(ツ)_/¯` | "dunno / whatever" — the ツ is katakana *tsu* |
+| Despair | `orz` `(´・ω・｀)` | defeat, gloom — `orz` is a person kneeling |
+| Table-flip | `(╯°□°）╯︵ ┻━┻` | flipping out (卓袱台返し) |
+
+Many of these are Japanese inventions that went global: **orz** (a kneeling figure, from a 2002 forum), **(´・ω・｀)** "shobon" (dejected, from 2channel), and the **¯\_(ツ)_/¯** shrug all started in Japan. On a Japanese keyboard, typing 「かお」suggests ready-made kaomoji.
+
+> **⚠️ Reality check (2025):** kaomoji now read as *nostalgic* — people in their 30s+ still use them, but Gen Z leans on LINE stickers and emoji instead. Recognize them everywhere; know that leading with `(´・ω・｀)` dates you a little.
+
+For the *newest* slang — current youth vocabulary, this year's buzzwords, and words that recently flipped meaning — see **[Contemporary & Emerging Japanese](09-contemporary-japanese.md)**.
+
+---
+
 ## Numbers as Words (Goroawase — 語呂合わせ)
 
 Japanese wordplay using numbers is popular because each digit can be read multiple ways:
@@ -213,6 +237,6 @@ Internet Japanese is a living language that evolves weekly. The best way to stay
 
 ---
 
-[← Spoken vs. Written](07-spoken-vs-written.md) · [🏠 Home](../README.md) · [Politeness Levels →](../politeness/01-levels-overview.md)
+[← Spoken vs. Written](07-spoken-vs-written.md) · [🏠 Home](../README.md) · [Contemporary Japanese →](09-contemporary-japanese.md)
 
 <!-- nav-footer:end -->

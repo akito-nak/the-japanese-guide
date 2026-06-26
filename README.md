@@ -29,6 +29,8 @@ This isn't a textbook. You don't read it cover to cover (unless you want to — 
 | [Phrases & Idioms](foundations/06-phrases-and-idioms.md) | Sound natural from day one |
 | [Spoken vs. Written](foundations/07-spoken-vs-written.md) | Why the Japanese you hear doesn't match the Japanese you read |
 | [Internet & Slang](foundations/08-internet-and-slang.md) | wwww and other mysteries explained |
+| [Contemporary & Emerging Japanese](foundations/09-contemporary-japanese.md) | This year's slang, buzzwords, and the words that just flipped meaning |
+| [Role Language (役割語)](foundations/10-role-language.md) | Why anime characters don't talk like anyone you'll ever meet |
 
 ### Step 2 — Understand politeness (it's unavoidable)
 
@@ -38,6 +40,7 @@ This isn't a textbook. You don't read it cover to cover (unless you want to — 
 | [Casual Japanese](politeness/02-casual-japanese.md) | How to talk with friends without sounding like a textbook |
 | [Polite Japanese](politeness/03-polite-japanese.md) | The everyday standard — shops, strangers, most situations |
 | [Honorific Japanese](politeness/04-honorific-japanese.md) | 敬語 — the system that determines your career in Japan |
+| [Modern & "Manual" Keigo](politeness/05-modern-keigo.md) | バイト敬語 — the evolving politeness you'll hear at every konbini |
 
 ### Step 3 — Absorb the culture
 
@@ -51,6 +54,7 @@ This isn't a textbook. You don't read it cover to cover (unless you want to — 
 | [Seasons & Nature](culture/06-seasons-and-nature.md) | Cherry blossoms, typhoons, and why season matters *constantly* |
 | [Traditional Arts](culture/07-traditional-arts.md) | Tea, kabuki, sumo, and the aesthetics that define Japan |
 | [Baseball & Sumo](culture/08-baseball-and-sumo.md) | The two national pastimes — 1,500 years of ritual meets America's game |
+| [Vtubers & Streaming](culture/09-vtuber-and-streaming.md) | Live-comment culture and the language of the media young Japan actually consumes |
 
 ### Step 4 — Navigate real Japan
 
