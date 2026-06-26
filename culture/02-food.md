@@ -229,3 +229,11 @@ Japan is not always easy for special diets, but awareness is growing:
 | Eat with both hands (hold bowl up) | Walk and eat in public (considered rude) |
 
 **Next up:** [Matsuri →](03-matsuri.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Culture & Norms](01-culture-and-norms.md) · [🏠 Home](../README.md) · [Matsuri →](03-matsuri.md)
+
+<!-- nav-footer:end -->

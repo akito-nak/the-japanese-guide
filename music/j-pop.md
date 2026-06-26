@@ -184,3 +184,11 @@ Anime theme songs (主題歌 — shudaika) are their own genre:
 5. Deep dive into your preferred genre from there
 
 **Next up:** [Traditional Music →](traditional-music.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Language Evolution](../history/language-evolution.md) · [🏠 Home](../README.md) · [Traditional Music →](traditional-music.md)
+
+<!-- nav-footer:end -->

@@ -448,3 +448,11 @@ Print this and stick it somewhere visible:
 Once you know hiragana, you can read Japanese menus, station names (with furigana), children's books, and the grammar in every sentence. It's not fluency — but it's the foundation everything else is built on.
 
 **Next up:** [Katakana →](02-katakana.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Home](../README.md) · [Katakana →](02-katakana.md)
+
+<!-- nav-footer:end -->

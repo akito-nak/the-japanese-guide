@@ -410,3 +410,11 @@ Together, they hold the country's sporting identity between them: one looking ou
 
 > 「野球は国民的娯楽、相撲は国技。どちらも日本の心です。」
 > "Baseball is the national pastime; sumo is the national sport. Both are the soul of Japan."
+
+<!-- nav-footer:start -->
+
+---
+
+[← Traditional Arts](07-traditional-arts.md) · [🏠 Home](../README.md) · [Trains & Transit →](../practical/trains-and-transit.md)
+
+<!-- nav-footer:end -->

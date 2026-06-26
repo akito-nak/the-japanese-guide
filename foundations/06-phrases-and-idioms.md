@@ -221,3 +221,11 @@ If you have time, I'd like to have a talk.
 I take your feedback very seriously. (Business/formal apology)
 
 **Next up:** [Spoken vs. Written Japanese →](07-spoken-vs-written.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Core Vocabulary](05-vocabulary-core.md) · [🏠 Home](../README.md) · [Spoken vs. Written →](07-spoken-vs-written.md)
+
+<!-- nav-footer:end -->

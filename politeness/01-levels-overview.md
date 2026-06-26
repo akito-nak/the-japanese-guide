@@ -176,3 +176,11 @@ Native speakers shift levels seamlessly mid-conversation. They might:
 This code-switching is natural, constant, and doesn't feel like effort to natives. For learners, the goal isn't to always be in the right register — it's to gradually develop sensitivity to which register the situation calls for.
 
 **Next up:** [Casual Japanese →](02-casual-japanese.md) | [Polite Japanese →](03-polite-japanese.md) | [Honorific Japanese →](04-honorific-japanese.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Internet & Slang](../foundations/08-internet-and-slang.md) · [🏠 Home](../README.md) · [Casual Japanese →](02-casual-japanese.md)
+
+<!-- nav-footer:end -->

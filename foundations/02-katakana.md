@@ -365,3 +365,11 @@ With hiragana and katakana under your belt, you can read a huge amount of real J
 The road ahead leads to kanji. It's a longer road. But the views are incredible.
 
 **Next up:** [Kanji →](03-kanji.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Hiragana](01-hiragana.md) · [🏠 Home](../README.md) · [Kanji →](03-kanji.md)
+
+<!-- nav-footer:end -->

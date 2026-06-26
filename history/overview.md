@@ -172,3 +172,11 @@ Japanese official documents, some businesses, and many older people still use er
 Every layer of Japanese history left a layer in the language. That's why Japanese feels simultaneously ancient and ultra-modern.
 
 **Next: [Samurai & Bushido →](samurai-and-bushido.md) | [Postwar Japan →](postwar-japan.md)**
+
+<!-- nav-footer:start -->
+
+---
+
+[← Emergencies](../practical/emergencies.md) · [🏠 Home](../README.md) · [Samurai & Bushido →](samurai-and-bushido.md)
+
+<!-- nav-footer:end -->

@@ -191,3 +191,11 @@ Traditional music appears in JLPT N3–N1 reading and listening sections as cult
 Key terms to know: 雅楽, 能楽, 歌舞伎, 民謡, 三味線, 箏, 尺八, 演歌, 太鼓
 
 Understanding these terms — even passively — helps with cultural reading passages that trip up learners who've never encountered traditional arts vocabulary.
+
+<!-- nav-footer:start -->
+
+---
+
+[← J-Pop](j-pop.md) · [🏠 Home](../README.md) · [Anime Lover →](../tracks/anime-lover.md)
+
+<!-- nav-footer:end -->

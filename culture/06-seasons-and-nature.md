@@ -245,3 +245,11 @@ Haiku (俳句) is Japan's most famous poetic form: three lines of 5-7-5 **mora**
 The seasons aren't background in Japan. They're foreground.
 
 **Next up:** [Traditional Arts →](07-traditional-arts.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Dialects](05-dialects.md) · [🏠 Home](../README.md) · [Traditional Arts →](07-traditional-arts.md)
+
+<!-- nav-footer:end -->

@@ -220,3 +220,11 @@ Modern Japanese continues to evolve rapidly:
 **AI and Japanese:** Large language models trained on Japanese data are changing how Japanese is written and processed. Autocorrect and input method editors (IME — 入力メソッドエディタ) have already changed how people choose kanji (type phonetically, select from suggestions).
 
 The language has been changing for 1,500 years. It will keep changing. Your job as a learner is to learn it as it is now — and enjoy the traces of everything it has been.
+
+<!-- nav-footer:start -->
+
+---
+
+[← Postwar Japan](postwar-japan.md) · [🏠 Home](../README.md) · [J-Pop →](../music/j-pop.md)
+
+<!-- nav-footer:end -->

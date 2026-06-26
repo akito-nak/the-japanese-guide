@@ -200,3 +200,11 @@ A yukata is a casual summer kimono worn at matsuri, onsen towns, and ryokan. Ren
 | 初詣はどこに行きましたか？ | hatsumōde wa doko ni ikimashita ka? | Where did you go for New Year's shrine visit? |
 
 **Next up:** [Pop Culture →](04-pop-culture.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Food](02-food.md) · [🏠 Home](../README.md) · [Pop Culture →](04-pop-culture.md)
+
+<!-- nav-footer:end -->

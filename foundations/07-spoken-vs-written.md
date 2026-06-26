@@ -233,3 +233,11 @@ These patterns appear constantly in speech but are rarely in textbooks:
 The gap narrows with time and input. Every hour of real Japanese you consume makes both sides more accessible.
 
 **Next up:** [Internet & Slang →](08-internet-and-slang.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Phrases & Idioms](06-phrases-and-idioms.md) · [🏠 Home](../README.md) · [Internet & Slang →](08-internet-and-slang.md)
+
+<!-- nav-footer:end -->

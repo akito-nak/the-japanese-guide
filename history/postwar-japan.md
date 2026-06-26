@@ -175,3 +175,11 @@ Japan's current young people are **Z世代 (Z sedai — Gen Z)** — digital nat
 | 3.11 (san-ten-ichi-ichi) | 2011 earthquake / tsunami — shorthand for that date |
 
 **Next: [Language Evolution →](language-evolution.md)**
+
+<!-- nav-footer:start -->
+
+---
+
+[← Samurai & Bushido](samurai-and-bushido.md) · [🏠 Home](../README.md) · [Language Evolution →](language-evolution.md)
+
+<!-- nav-footer:end -->

@@ -366,3 +366,11 @@ January = 一月 (ichigatsu), February = 二月 (nigatsu) ... December = 十二�
 These 500 words are your toolkit. They won't make you fluent, but they'll get you through almost every real-world situation you'll encounter in Japan — and they form the foundation for every grammar structure you'll learn next.
 
 **Next up:** [Phrases & Idioms →](06-phrases-and-idioms.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Grammar Basics](04-grammar-basics.md) · [🏠 Home](../README.md) · [Phrases & Idioms →](06-phrases-and-idioms.md)
+
+<!-- nav-footer:end -->

@@ -208,3 +208,11 @@ Creative kanji repurposing happens constantly online:
 Internet Japanese is a living language that evolves weekly. The best way to stay current: follow Japanese Twitter/X, watch YouTube videos with Japanese comments on, and join a Japanese Discord server or LINE group. Real usage beats any vocabulary list.
 
 **Next up:** [Politeness Levels Overview →](../politeness/01-levels-overview.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Spoken vs. Written](07-spoken-vs-written.md) · [🏠 Home](../README.md) · [Politeness Levels →](../politeness/01-levels-overview.md)
+
+<!-- nav-footer:end -->
