@@ -1,3 +1,3 @@
-# Generated single-file PDF of the guide (build with scripts/build-pdf.sh)
-the-japanese-guide.pdf
+# Ignore stray PDFs, but track the canonical built guide (scripts/build-pdf.sh)
 *.pdf
+!the-japanese-guide.pdf
