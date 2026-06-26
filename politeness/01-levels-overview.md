@@ -181,6 +181,6 @@ This code-switching is natural, constant, and doesn't feel like effort to native
 
 ---
 
-[← Internet & Slang](../foundations/08-internet-and-slang.md) · [🏠 Home](../README.md) · [Casual Japanese →](02-casual-japanese.md)
+[← Role Language](../foundations/10-role-language.md) · [🏠 Home](../README.md) · [Casual Japanese →](02-casual-japanese.md)
 
 <!-- nav-footer:end -->

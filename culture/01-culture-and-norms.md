@@ -245,6 +245,6 @@ Understanding the culture doesn't just help you behave appropriately — it make
 
 ---
 
-[← Honorific Japanese](../politeness/04-honorific-japanese.md) · [🏠 Home](../README.md) · [Food →](02-food.md)
+[← Modern Keigo](../politeness/05-modern-keigo.md) · [🏠 Home](../README.md) · [Food →](02-food.md)
 
 <!-- nav-footer:end -->

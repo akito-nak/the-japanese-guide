@@ -7,10 +7,13 @@ foundations/05-vocabulary-core.md
 foundations/06-phrases-and-idioms.md
 foundations/07-spoken-vs-written.md
 foundations/08-internet-and-slang.md
+foundations/09-contemporary-japanese.md
+foundations/10-role-language.md
 politeness/01-levels-overview.md
 politeness/02-casual-japanese.md
 politeness/03-polite-japanese.md
 politeness/04-honorific-japanese.md
+politeness/05-modern-keigo.md
 culture/01-culture-and-norms.md
 culture/02-food.md
 culture/03-matsuri.md
@@ -19,6 +22,7 @@ culture/05-dialects.md
 culture/06-seasons-and-nature.md
 culture/07-traditional-arts.md
 culture/08-baseball-and-sumo.md
+culture/09-vtuber-and-streaming.md
 practical/trains-and-transit.md
 practical/cities-and-regions.md
 practical/shopping-and-money.md

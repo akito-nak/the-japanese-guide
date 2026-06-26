@@ -203,6 +203,133 @@ Key headline features:
 
 ---
 
+## Dates: Reading 元号 (Era Names)
+
+Japanese news constantly mixes the Western calendar (西暦, *seireki*) with the era-name calendar (和暦, *wareki*). You must be able to convert on the fly.
+
+**The Reiwa formula:** 令和 year **+ 2018** = Western year. So 令和7年 = **2025**. (Reverse: 2025 − 2018 = 令和7.)
+
+| Era | Reading | Span | Formula | Note |
+|---|---|---|---|---|
+| 昭和 | Shōwa | 1926–1989 | 和暦 + 1925 | Ended at 昭和64年 (just 7 days of it) |
+| 平成 | Heisei | 1989–2019 | 和暦 + 1988 | Ended at 平成31年 |
+| 令和 | Reiwa | 2019– | 和暦 + 2018 | 令和元年 = 2019 |
+
+- **元年 (gannen)** = "year 1" of an era. News writes 令和元年, never 令和1年.
+- **改元 (kaigen)** = changing the era. A transition year splits: 2019 was 平成31年 (Jan–Apr) *and* 令和元年 (May–Dec).
+- **Which one news uses:** 和暦 for official/domestic/legal matters (budgets, laws); 西暦 for international news, sports, and science. Many outlets print both: 2025年（令和7年）.
+
+---
+
+## Numbers: The Every-Four-Digits System
+
+Japanese groups large numbers by **10,000 (万)**, not by 1,000 — and each unit is 10,000× the last. This trips up every learner, because printed numerals still use the Western 3-digit comma.
+
+| Unit | Reading | Value |
+|---|---|---|
+| 万 | man | 10,000 (10⁴) |
+| 億 | oku | 100 million (10⁸) |
+| 兆 | chō | 1 trillion (10¹²) |
+| 京 | kei | 10¹⁶ (national-debt scale) |
+
+**To parse a big number:** slice into 4-digit blocks from the right.
+
+| Numeral | Reading | Value |
+|---|---|---|
+| 1億2000万人 | ichi-oku nisen-man nin | 120,000,000 people (≈ Japan's population) |
+| 365兆円 | sanbyaku-rokujū-go chō en | 365 trillion yen (national-budget scale) |
+
+**Approximation words** (essential for headlines):
+
+| Word | Reading | Meaning |
+|---|---|---|
+| 約 | yaku | "approximately" — goes *before*: 約3000人 |
+| 〜余り | -amari | "a little more than" — goes *after*: 100人余り (always *more*) |
+| 〜強 / 〜弱 | -kyō / -jaku | "a bit more than / less than" a round figure: 3割強 ≈ 30–34%, 3割弱 ≈ 26–29% |
+| 割 / 分 / 厘 | wari / bu / rin | 1割 = 10%, 1分 = 1%, 1厘 = 0.1% (3割2分 = 32%) |
+| ポイント | pointo | percentage *point*: 「2ポイント増」= up 2 points, not 2% |
+| 年度 | nendo | fiscal/academic year — **April 1 to March 31**. 2024年度 = Apr 2024–Mar 2025 |
+
+> **Drift note:** a 2024 NHK survey found ~19% of people in their 20s now read 「7割弱」as *more* than 70% — the reverse of the traditional sense. Writers still use 弱 = less; learn the traditional rule but know the confusion exists.
+
+---
+
+## Names: Crime-Reporting Honorifics
+
+Japanese media follow strict conventions for how they refer to people in criminal cases — and *dropping the honorific* itself signals legal status.
+
+| Term | Reading | Meaning |
+|---|---|---|
+| 容疑者 | yōgisha | **Suspect** — name + 容疑者 after arrest. A media-coined word that replaced the old bare-name style |
+| 被告 | hikoku | **Defendant** — name + 被告 after indictment (起訴) |
+| 〜の疑い | …no utagai | "on suspicion of ~" — the standard hedge before guilt is proven |
+| 自称 | jishō | "self-described" — prefixed when police *couldn't verify* identity/job: 自称・会社員 |
+| 実名 / 匿名報道 | jitsumei / tokumei hōdō | Named vs. anonymous reporting. Adults are usually named; minors (少年法) and many victims are anonymous |
+| 呼び捨て | yobisute | Using a bare name with no honorific. Media switched to 容疑者/被告 partly to avoid implying guilt |
+
+**The 逮捕 → 判決 vocabulary chain:**
+
+| Japanese | Reading | Meaning |
+|---|---|---|
+| 逮捕 | taiho | arrest |
+| 送検 | sōken | referral from police to prosecutors |
+| 起訴 / 不起訴 | kiso / fukiso | indictment / decision not to prosecute |
+| 求刑 | kyūkei | the sentence the prosecution *asks for* |
+| 判決 | hanketsu | the verdict/sentence handed down |
+| 実刑 / 執行猶予 | jikkei / shikkō-yūyo | actual prison term / suspended sentence |
+| 控訴 / 上告 | kōso / jōkoku | appeal to high court / to Supreme Court |
+
+> **Fresh change:** as of 2024 the 法務省 directs prisons to address inmates as 〜さん by default — a human-rights-driven shift away from 呼び捨て.
+
+---
+
+## Weather: Forecast Register (気象)
+
+Weather is on every broadcast, and it has its own set phrases beyond 晴れ／曇り／雨.
+
+| Japanese | Reading | Meaning |
+|---|---|---|
+| 前線 | zensen | weather front (寒冷前線 cold, 温暖前線 warm, 梅雨前線 rainy-season) |
+| 気圧の谷 | kiatsu no tani | a trough of low pressure — brings unsettled weather |
+| 大気の状態が不安定 | taiki no jōtai ga fuantei | "the atmosphere is unstable" — set warning for thunder, squalls, downpours |
+| 〜のおそれ | …no osore | "risk of ~": 大雨のおそれ |
+| ところにより | tokoro ni yori | "in places" — patchy, not widespread |
+| 線状降水帯 | senjō kōsuitai | "linear rainband" — stalled storms dumping intense rain (official JMA term since 2021) |
+
+**The 3-tier alert system** (low → high): **注意報** (advisory) → **警報** (warning) → **特別警報** (emergency, "protect your life now").
+
+> A new **危険警報** tier is being inserted between 警報 and 特別警報, but **only from May 2026** — not in use yet.
+
+**Heat thresholds** (by the day's maximum, except 熱帯夜):
+
+| Japanese | Reading | Threshold |
+|---|---|---|
+| 夏日 | natsubi | ≥ 25°C |
+| 真夏日 | manatsubi | ≥ 30°C |
+| 猛暑日 | mōshobi | ≥ 35°C (the highest *official* term for now) |
+| 熱帯夜 | nettaiya | overnight *minimum* ≥ 25°C |
+
+Plus **熱中症警戒アラート** (heatstroke alert), nationwide since 2021, with a higher 特別警戒 tier added in 2024.
+
+---
+
+## Sports: Headline Shorthand
+
+Sports headlines have their own punchy vocabulary, much of it borrowed from sumo.
+
+| Japanese | Reading | Meaning |
+|---|---|---|
+| 制す | seisu | to win / take (a title or match): 決勝を制す |
+| 完封 | kanpū | a shutout (pitcher allows no runs) |
+| 連覇 | renpa | consecutive titles: 3連覇 = three-peat |
+| V | bui | = 優勝 (championship). V奪回 = recapture the crown; V逸 = narrowly miss it |
+| 逆転 | gyakuten | comeback/reversal: 逆転サヨナラ = walk-off comeback |
+| 〜が〜を下す | …o kudasu | A defeats B (formal headline verb) |
+| 白星 / 黒星 | shiroboshi / kuroboshi | a win / a loss (from sumo's open/filled circles) |
+| 番狂わせ | bankuruwase | an upset — the underdog wins |
+
+---
+
 ## Listening: NHK Radio and Television
 
 ### NHK Radio Japanese
