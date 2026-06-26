@@ -240,3 +240,11 @@ Every grammar concept we covered in the earlier sections connects to culture:
 Understanding the culture doesn't just help you behave appropriately — it makes the language itself make sense.
 
 **Next up:** [Food →](02-food.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Honorific Japanese](../politeness/04-honorific-japanese.md) · [🏠 Home](../README.md) · [Food →](02-food.md)
+
+<!-- nav-footer:end -->

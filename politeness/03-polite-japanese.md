@@ -253,3 +253,11 @@ The shift from polite to casual usually happens gradually as a relationship deve
 When in doubt: stay polite. You can never offend someone by being too polite.
 
 **Next up:** [Honorific Japanese →](04-honorific-japanese.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Casual Japanese](02-casual-japanese.md) · [🏠 Home](../README.md) · [Honorific Japanese →](04-honorific-japanese.md)
+
+<!-- nav-footer:end -->

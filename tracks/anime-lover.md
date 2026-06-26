@@ -189,3 +189,11 @@ Join the Japanese learning community:
 - **Discord servers:** Join "Japanese Language Study Group" servers to find conversation partners
 
 **Next tracks:** [Manga Reader →](manga-reader.md) | [JLPT N5 →](jlpt/n5.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Traditional Music](../music/traditional-music.md) · [🏠 Home](../README.md) · [Manga Reader →](manga-reader.md)
+
+<!-- nav-footer:end -->

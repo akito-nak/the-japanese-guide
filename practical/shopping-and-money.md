@@ -193,3 +193,11 @@ Japan has predictable sale seasons:
 **福袋 (fukubukuro)** — lucky bags — are a January tradition. Shops sell sealed bags containing multiple items (usually above their combined retail value). People queue from the previous night for popular brands.
 
 **Next up:** [Emergencies →](emergencies.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Cities & Regions](cities-and-regions.md) · [🏠 Home](../README.md) · [Emergencies →](emergencies.md)
+
+<!-- nav-footer:end -->

@@ -148,3 +148,11 @@ Don't use the JLPT to:
 **The best Japanese learners do both:** Study systematically for the JLPT *and* immerse themselves in real Japanese media and conversation.
 
 **Choose your level:** [N5 →](n5.md) | [N4 →](n4.md) | [N3 →](n3.md) | [N2 →](n2.md) | [N1 →](n1.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← News Japanese](../news-japanese.md) · [🏠 Home](../../README.md) · [JLPT N5 →](n5.md)
+
+<!-- nav-footer:end -->

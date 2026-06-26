@@ -200,3 +200,11 @@ These concepts appear in art, design, everyday Japanese speech, and literary cri
 This applies to language learning too.
 
 **Next up:** [Trains & Transit →](../practical/trains-and-transit.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Seasons & Nature](06-seasons-and-nature.md) · [🏠 Home](../README.md) · [Baseball & Sumo →](08-baseball-and-sumo.md)
+
+<!-- nav-footer:end -->

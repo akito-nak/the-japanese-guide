@@ -238,3 +238,11 @@ Okinawa is its own cultural world — historically the independent Ryūkyū King
 | 九州 (Kyūshū) | Fukuoka, Nagasaki, Kumamoto, Oita, etc. | Fukuoka, Nagasaki |
 
 **Next up:** [Shopping & Money →](shopping-and-money.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Trains & Transit](trains-and-transit.md) · [🏠 Home](../README.md) · [Shopping & Money →](shopping-and-money.md)
+
+<!-- nav-footer:end -->

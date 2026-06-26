@@ -272,3 +272,11 @@ Japanese uses specific "counter" words depending on what you're counting. There'
 Grammar is a tool, not a cage. The more you read and listen to Japanese, the more these patterns will become intuitive. Don't aim to memorize rules — aim to recognize patterns.
 
 **Next up:** [Core Vocabulary →](05-vocabulary-core.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Kanji](03-kanji.md) · [🏠 Home](../README.md) · [Core Vocabulary →](05-vocabulary-core.md)
+
+<!-- nav-footer:end -->

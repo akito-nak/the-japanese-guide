@@ -255,3 +255,11 @@ It's everywhere — perhaps overused in modern Japanese, but entirely expected i
 When in doubt: if they're doing it, elevate. If you're doing it, humble.
 
 **Next:** [Culture & Norms →](../culture/01-culture-and-norms.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Polite Japanese](03-polite-japanese.md) · [🏠 Home](../README.md) · [Culture & Norms →](../culture/01-culture-and-norms.md)
+
+<!-- nav-footer:end -->

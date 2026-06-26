@@ -225,3 +225,11 @@ Japan's casual speech isn't monolithic — teenagers, young adults, middle-aged 
 | 60s+ | Regional dialect features, older vocabulary, もの/のだ patterns |
 
 **Next up:** [Polite Japanese →](03-polite-japanese.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Politeness Levels](01-levels-overview.md) · [🏠 Home](../README.md) · [Polite Japanese →](03-polite-japanese.md)
+
+<!-- nav-footer:end -->

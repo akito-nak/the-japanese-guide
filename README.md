@@ -110,3 +110,11 @@ Already past the basics? Jump into the track that fits your vibe:
 ---
 
 *Let's go. 行きましょう！*
+
+<!-- nav-footer:start -->
+
+---
+
+[Begin →](foundations/01-hiragana.md)
+
+<!-- nav-footer:end -->

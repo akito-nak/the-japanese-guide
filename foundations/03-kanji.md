@@ -616,3 +616,11 @@ Most Japanese text mixes all three systems in the same sentence:
 This mixing is completely normal and eventually feels completely natural.
 
 **Next up:** [Grammar Basics →](04-grammar-basics.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Katakana](02-katakana.md) · [🏠 Home](../README.md) · [Grammar Basics →](04-grammar-basics.md)
+
+<!-- nav-footer:end -->

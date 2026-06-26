@@ -312,3 +312,11 @@ Understanding nemawashi prevents massive cultural frustration: proposals introdu
 **ブラック企業 (burakku kigyō):** "Black company" — exploitative employer. Antonym: ホワイト企業 (howaito kigyō).
 
 **Next tracks:** [News Japanese →](news-japanese.md) | [JLPT N3 →](jlpt/n3.md)**
+
+<!-- nav-footer:start -->
+
+---
+
+[← Manga Reader](manga-reader.md) · [🏠 Home](../README.md) · [News Japanese →](news-japanese.md)
+
+<!-- nav-footer:end -->

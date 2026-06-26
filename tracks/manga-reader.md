@@ -238,3 +238,11 @@ Many manga aimed at older audiences drop furigana entirely (most seinen, some sh
 The fastest progress comes from reading things you desperately want to understand. Pick the manga you love most and commit to reading it in Japanese.
 
 **Next tracks:** [Anime Lover →](anime-lover.md) | [JLPT N4 →](jlpt/n4.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Anime Lover](anime-lover.md) · [🏠 Home](../README.md) · [Business Japanese →](business-japanese.md)
+
+<!-- nav-footer:end -->

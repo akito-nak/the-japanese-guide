@@ -165,3 +165,11 @@ The **西南戦争 (Seinan Sensō — Satsuma Rebellion, 1877)** was the last ga
 The samurai as a legal class ended in 1877. As a cultural force, they never left.
 
 **Next: [Postwar Japan →](postwar-japan.md)**
+
+<!-- nav-footer:start -->
+
+---
+
+[← Historical Overview](overview.md) · [🏠 Home](../README.md) · [Postwar Japan →](postwar-japan.md)
+
+<!-- nav-footer:end -->

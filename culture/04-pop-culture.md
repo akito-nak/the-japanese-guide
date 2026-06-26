@@ -215,3 +215,11 @@ Harajuku in Tokyo has been the global epicenter of Japanese street fashion since
 | 量産型 (ryōsankata) | "Mass-produced type" — soft, feminine basic style popular among young women |
 
 **Next up:** [Dialects →](05-dialects.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Matsuri](03-matsuri.md) · [🏠 Home](../README.md) · [Dialects →](05-dialects.md)
+
+<!-- nav-footer:end -->

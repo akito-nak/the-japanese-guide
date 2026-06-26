@@ -238,3 +238,11 @@ Japanese taxis are clean, reliable, and expensive:
 > 乗り換えは何番線ですか？ — Which platform for the transfer?
 
 **Next up:** [Cities & Regions →](cities-and-regions.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Baseball & Sumo](../culture/08-baseball-and-sumo.md) · [🏠 Home](../README.md) · [Cities & Regions →](cities-and-regions.md)
+
+<!-- nav-footer:end -->

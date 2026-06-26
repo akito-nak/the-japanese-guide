@@ -248,3 +248,11 @@ Educational content for school children — accessible, well-produced, good inte
 **The habit that makes this work:** Read one news article every single day. It doesn't matter if you don't understand everything. Over 6 months, the vocabulary will compound.
 
 **Next tracks:** [Business Japanese →](business-japanese.md) | [JLPT N2 →](jlpt/n2.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Business Japanese](business-japanese.md) · [🏠 Home](../README.md) · [JLPT Overview →](jlpt/overview.md)
+
+<!-- nav-footer:end -->

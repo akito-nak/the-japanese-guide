@@ -179,3 +179,11 @@ Learn standard Japanese first. Once you're comfortable, you'll start naturally p
 One exception: **Kansai-ben** is so prevalent in anime, comedy, and casual media that passive recognition from early on is useful. You don't need to produce it, but understanding it matters.
 
 **Next up:** [Seasons & Nature →](06-seasons-and-nature.md)
+
+<!-- nav-footer:start -->
+
+---
+
+[← Pop Culture](04-pop-culture.md) · [🏠 Home](../README.md) · [Seasons & Nature →](06-seasons-and-nature.md)
+
+<!-- nav-footer:end -->

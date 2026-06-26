@@ -262,3 +262,11 @@ Before visiting Japan, do these:
 6. **Check travel advisories** for typhoon season and earthquake-prone areas
 
 Japan is safe. But prepared is better.
+
+<!-- nav-footer:start -->
+
+---
+
+[← Shopping & Money](shopping-and-money.md) · [🏠 Home](../README.md) · [Historical Overview →](../history/overview.md)
+
+<!-- nav-footer:end -->
