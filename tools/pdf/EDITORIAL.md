@@ -264,7 +264,9 @@ of their own at the back, so a reader never sees an answer by accident.
 A General-profile book that teaches a language declares it in `guide.toml`
 (`language = "ja"`). That loads the language's script fonts in the PDF and
 switches on these rules, which take precedence over the general profile where
-they differ. Today the supported language is Japanese (`ja`).
+they differ. Supported languages: Japanese (`ja`) and Chinese (`zh`, Simplified
+script fonts), Spanish (`es`) and French (`fr`). A Latin-script language needs
+no extra fonts.
 
 **Voice.** Learners come to a language out of passion; the book mirrors it.
 Warm, lively and a little playful: a joke, a vivid image or a memorable
@@ -272,15 +274,93 @@ contrast is welcome when it makes a point stick (橋 *hashi* "bridge" and 箸
 *hashi* "chopsticks"). Humor serves the learning; it never replaces an
 explanation, mocks the learner or the culture, or uses emoji.
 
-**Organization.** Build skills before applying them: the writing system and
-core grammar first, then register and real usage, then culture and context, then
-goal-oriented paths (media, work, exams). Group chapters into parts. Each section
-teaches one coherent skill or topic.
+**Organization.** Build skills before applying them: how to learn first, then
+the sounds and the writing system, core grammar, register and real usage, then
+culture and context, then goal-oriented paths (media, work, exams). Group
+chapters into parts. Each section teaches one coherent skill or topic.
+
+- **Chapter 1 is `# Chapter 1 — How to Learn <Language>`** and contains a
+  section titled `# Study and Immersion: The Middle Path`. **[checked]** Its
+  other sections: *Why <Language>* (the myths, the real hurdles, and an honest,
+  dated estimate of the hours it takes), *Apps, Courses and Tools* (dated; how
+  to type the language) and *The <Exam or Framework> Map* (the proficiency
+  levels as a map of the whole journey, with realistic hours). A book may add a
+  section its readers need (French adds *Coming Back to School French*).
+- **Chapter 2 teaches the sound system,** with the script where the two can't
+  be separated (pinyin, kana). It names the language's hardest contrasts for
+  English speakers (Mandarin tones; Japanese vowel length, double consonants
+  and pitch accent; the Spanish tap and trill; French nasal vowels and *u*
+  against *ou*) and trains the ear for them, not only the mouth.
+- **The back matter has a resources page** (`reference/NN-resources.md`) whose
+  last group, *Method*, lists the research and the books on learning that
+  chapter 1 draws on.
+
+**Method.** These books teach the language *and* the best-supported way to
+learn it. The method comes from second-language acquisition research, memory
+research and linguistics, and the book shows its evidence the way it shows any
+other fact.
+
+- **The evidence core.** Section 1.2 presents, in plain language, what the
+  research says about how adults learn a language, and every book covers the
+  same core:
+  - comprehensible input as the engine of acquisition (Krashen, 1982), and its
+    limits: input alone leaves gaps in accuracy (Swain, 1985);
+  - explicit instruction speeds learning and lasts (Norris and Ortega, 2000);
+  - output, noticing and feedback (Swain, 1985; Schmidt, 1990; Long, 1996);
+  - spaced repetition (Cepeda et al., 2006) and retrieval practice (Karpicke
+    and Roediger, 2008), with the practical rules: learn words in sentences,
+    audio on every card, production cards for words you want to use, and a
+    cap on new cards a day;
+  - extensive reading and the coverage threshold (Laufer, 1989; Hu and Nation,
+    2000): about 98% known words for comfortable reading, which is why graded
+    readers come first;
+  - high-variability phonetic training for hard sound contrasts (Logan, Lively
+    and Pisoni, 1991; Thomson, 2018) and shadowing (Hamada, 2016).
+
+  Then the language's own evidence: what research says about its particular
+  hurdles (Mandarin tone training; learning characters through their
+  components; Japanese length and pitch-accent perception; cognates in Spanish
+  and French).
+- **The learning loop.** Section 1.2 ties the evidence into one cycle, *study →
+  input → output → review*, drawn as a figure, with one worked turn of the loop
+  in the target language. It ends with *A Routine by Level*: a table that
+  divides about 45 minutes a day between study, input, output and review for
+  each band of the book's proficiency framework, shifting from study toward
+  input and output as the learner improves.
+- **The method runs through the book.** Chapter 1 explains a technique once;
+  later chapters apply it to their own material and cross-reference section
+  1.2 rather than explaining it again: the sound chapter sets up ear training,
+  the script chapter applies spacing and components, the media chapters apply
+  the coverage threshold to choosing what to watch and read, and the exam
+  chapter turns the routine into a study plan. Where it fits, a skill section
+  closes with a task to try on real input or a real person (`## Go Say This`),
+  so the loop closes.
+- **How to cite research.** Name who and when in the text, say what they did
+  and what they found, with numbers when they matter: "students who tested
+  themselves recalled about 80% of the word pairs a week later; students who
+  restudied recalled about 36% (Karpicke and Roediger, 2008)". Say how strong
+  the evidence is: a meta-analysis or review across many studies outweighs a
+  single experiment, and mixed or contested findings are called mixed. Never
+  write "studies show" or "research suggests" without naming the study in the
+  same paragraph. **[checked]** List the works cited in chapter 1's Further
+  Reading and in the resources page's *Method* group.
+- **Evidence, experience and convention are labeled.** Advice that rests on
+  research says so; advice that rests on teachers' and learners' experience
+  (a routine, a tool, a sequence) is offered as experience, not dressed up as
+  science. Myths are not repeated as advice: learning styles have no support
+  as a basis for teaching (Pashler et al., 2008), and "adults can't learn
+  languages" is not what the research on age finds.
+- **Fact-check every citation** (authors, year, what was measured, the figures)
+  before a book is published, like any other fact. A book's working notes may
+  track this in `planning/VERIFY.md`.
 
 **Example sentences** are blockquotes: the target-language sentence, its
 romanization in italics, then the English translation, one per line with a
-trailing backslash for the line break. A quote that opens with the target
-script is set as an example in the PDF.
+trailing backslash for the line break. In a book with its own script, a quote
+that opens with that script is set as an example in the PDF. In a Latin-script
+book (Spanish, French) there is no romanization line: the example is the
+sentence, then its translation, and any quote whose first paragraph uses hard
+line breaks is set as an example (so a plain quotation stays one paragraph).
 
 ```markdown
 > 私は寿司を食べます。\
@@ -293,12 +373,20 @@ is not a defined term and needs no glossary entry. Add a literal gloss in bracke
 [object] eat"). Several short examples may share one blockquote, separated by a
 blank `>` line.
 
-**Romanization.** Modified Hepburn with macrons for long vowels (*tōkyō*, *kōhī*)
+```markdown
+> ¿Dónde está la estación?\
+> Where is the station?
+```
+
+**Romanization.** Japanese: modified Hepburn with macrons for long vowels (*tōkyō*, *kōhī*)
 in examples and glosses. English running text uses the common English spelling of
 place names and loanwords (Tokyo, Osaka, sushi). Part I gives romanization for
 every example; later parts give it only for new vocabulary and where a reading
 is not obvious. Readings of kanji follow the word in parentheses on first use:
-食べる (たべる).
+食べる (たべる). Chinese: Hanyu Pinyin with tone marks (*nǐ hǎo*), same
+schedule. Spanish and French: no romanization; pronunciation is taught in the
+sound chapter, with simple English respellings (*GRAH-syahs*) there and for
+words whose pronunciation the spelling rules don't predict.
 
 **Target-language terms** in running text appear in the script, followed by
 romanization and meaning on first use: 敬語 (*keigo*, honorific language). After
@@ -341,4 +429,6 @@ is dated ("as of 2026").
 - [ ] Chapter end: exercises or questions, further reading, bridge paragraph
 - [ ] Every bold term in the glossary
 - [ ] Facts, versions and outputs verified; anything time-sensitive dated
+- [ ] Language books: chapter 1 teaches the method; every research claim names its study
+      and year; later chapters cross-reference section 1.2 instead of re-explaining
 - [ ] Repo-only material wrapped; book text reads cleanly without it

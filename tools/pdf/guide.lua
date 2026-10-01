@@ -136,6 +136,10 @@ end
 
 -- Callouts --------------------------------------------------------------------
 
+-- The language a language-learning book teaches (guide.toml `language`).
+local GUIDE_LANGUAGE = os.getenv('GUIDE_LANGUAGE') or ''
+local LATIN_SCRIPT = { es = true, fr = true }
+
 local CALLOUTS = {
   ['Note:'] = { 'NoteInk', 'NoteTint', 'Note' },
   ['Tip:'] = { 'AccentDark', 'AccentTint', 'Tip' },
@@ -155,10 +159,19 @@ local function block_quote(el)
         :extend(from(el.content, 2)):extend({ raw('\\end{GuideCallout}') })
     end
   end
-  -- A quote that opens with kana or kanji is an example sentence in a
-  -- language-learning book (EDITORIAL.md, "Language-learning books").
+  -- An example sentence in a language-learning book (EDITORIAL.md,
+  -- "Language-learning books"): in a book teaching a language with its own
+  -- script, a quote that opens with that script (kana, kanji, hanzi); in a
+  -- Latin-script book (es, fr), a quote whose first paragraph is split into
+  -- lines with hard line breaks (sentence, then translation).
   local opening = first and pandoc.utils.stringify(first) or ''
-  if opening:find('^[\227-\233]') then
+  local example = opening:find('^[\227-\233]')
+  if not example and LATIN_SCRIPT[GUIDE_LANGUAGE] and first and first.t == 'Para' then
+    for _, inl in ipairs(first.content) do
+      if inl.t == 'LineBreak' then example = true; break end
+    end
+  end
+  if example then
     return pandoc.List({ raw('\\begin{GuideExample}') }):extend(el.content)
       :extend({ raw('\\end{GuideExample}') })
   end
@@ -205,7 +218,7 @@ local function link(el)
   local id = target:match('^#(.+)$')
   local ref = id and numbers[id]
   if ref then
-    local text = pandoc.utils.stringify(el.content):lower()
+    local text = pandoc.text.lower(pandoc.utils.stringify(el.content))
     if not (text:find('section', 1, true) or text:find('chapter', 1, true)) then
       return { el, pandoc.Str(' (' .. ref.kind .. '\u{a0}' .. ref.n .. ')') }
     end
@@ -227,12 +240,12 @@ local function index_escape(s)
 end
 
 local function add_term(strong)
-  local display = pandoc.utils.stringify(strong):gsub('%s+', ' ')
+  local display = pandoc.utils.stringify(strong):gsub('[ \t\r\n]+', ' ')  -- not %s: it matches UTF-8 continuation bytes such as 0xA0 (à)
   local keys = {}
-  local base = display:gsub('%s*%b()', ''):gsub('^%s+', ''):gsub('%s+$', '')
-  if #base > 1 then keys[#keys + 1] = base:lower() end
+  local base = display:gsub(' *%b()', ''):gsub('^ +', ''):gsub(' +$', '')
+  if #base > 1 then keys[#keys + 1] = pandoc.text.lower(base) end
   for inner in display:gmatch('%(([^)]+)%)') do
-    if #inner > 1 then keys[#keys + 1] = inner:lower() end
+    if #inner > 1 then keys[#keys + 1] = pandoc.text.lower(inner) end
   end
   if #keys > 0 then terms[#terms + 1] = { display = display, keys = keys } end
 end
@@ -436,14 +449,14 @@ function Pandoc(doc)
 
   local function index_para(b)
     if in_glossary or #terms == 0 then return b end
-    local text = pandoc.utils.stringify(b):lower()
+    local text = pandoc.text.lower(pandoc.utils.stringify(b))
     local marks = pandoc.List()
     for _, t in ipairs(terms) do
       if not indexed[t.display] then
         for _, key in ipairs(t.keys) do
           if has_term(text, key) then
             indexed[t.display] = true
-            marks:insert(rawi('\\index{' .. index_escape(t.display:lower()) .. '@'
+            marks:insert(rawi('\\index{' .. index_escape(pandoc.text.lower(t.display)) .. '@'
                               .. index_escape(t.display) .. '}'))
             break
           end
@@ -581,4 +594,40 @@ function Pandoc(doc)
   return doc
 end
 
-return { { Pandoc = Pandoc } }
+-- Phonetic (IPA) characters the body font lacks, used in language-learning
+-- books ([ɛ], [ʁ], les‿amis): drawn from the symbol font, together with any
+-- combining marks that follow them (the tilde of [ɔ̃]), so they never print blank.
+local IPA_FALLBACK = { [0x025B] = true, [0x0254] = true, [0x0281] = true,
+  [0x0283] = true, [0x0292] = true, [0x0272] = true, [0x0265] = true,
+  [0x028A] = true, [0x026A] = true, [0x203F] = true, [0x02D0] = true }
+
+local function ipa_str(el)
+  local needs = false
+  for _, c in utf8.codes(el.text) do
+    if IPA_FALLBACK[c] then needs = true break end
+  end
+  if not needs then return nil end
+  local out, plain, sym = {}, {}, nil
+  local function flush_plain()
+    if #plain > 0 then
+      out[#out + 1] = escape_text(table.concat(plain)):gsub("[%[%]]", "{%0}"); plain = {}
+    end
+  end
+  local function flush_sym()
+    if sym then out[#out + 1] = '\\GuideSym{' .. table.concat(sym) .. '}'; sym = nil end
+  end
+  for _, c in utf8.codes(el.text) do
+    local ch = utf8.char(c)
+    if IPA_FALLBACK[c] then
+      flush_plain(); sym = sym or {}; sym[#sym + 1] = ch
+    elseif sym and c >= 0x0300 and c <= 0x036F then
+      sym[#sym + 1] = ch
+    else
+      flush_sym(); plain[#plain + 1] = ch
+    end
+  end
+  flush_sym(); flush_plain()
+  return rawi(table.concat(out))
+end
+
+return { { Pandoc = Pandoc }, { Str = ipa_str } }
