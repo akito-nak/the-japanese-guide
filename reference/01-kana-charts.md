@@ -1,6 +1,6 @@
 # Kana Charts
 
-Hiragana and katakana represent the same set of sounds. Each table reads row by row in the traditional order (*a, i, u, e, o*), with the romanization in modified Hepburn. [Chapter 1](../01-writing-system/README.md) explains how each script works and when to use it.
+Hiragana and katakana represent the same set of sounds. Each table reads row by row in the traditional order (*a, i, u, e, o*), with the romanization in modified Hepburn. [Chapter 3](../03-writing-system/README.md) explains how each script works and when to use it.
 
 ## Hiragana
 

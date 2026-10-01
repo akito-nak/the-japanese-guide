@@ -511,7 +511,7 @@ CHAPTER_END_PAGES = {
     "general": ("Questions and Sources", ("Questions to Consider", "Sources and Further Reading")),
     # Technical guides with `problem_sets = true` (EDITORIAL.md, "Problem Sets").
     "problems": ("Problems and Further Reading", ("Problems", "Further Reading")),
-    # Language-learning books, `language = "ja"` (EDITORIAL.md, "Language-learning
+    # Language-learning books, `language = "ja"` etc. (EDITORIAL.md, "Language-learning
     # books"): graded practice, with answers in a part of their own at the back.
     "language": ("Practice and Further Reading", ("Practice", "Further Reading")),
 }
@@ -645,6 +645,7 @@ def editorial_problems(root: Path, files: list[Path]) -> list[str]:
         problems += problem_set_problems(root, files, chapter_dirs, numbers)
     if guide.get("language"):
         problems += practice_problems(root, files, chapter_dirs, numbers)
+        problems += method_problems(root, files, numbers, guide["language"])
     for d in sorted(chapter_dirs):
         ends = [f for f in files if f.parent == d and f.name.startswith("99-")]
         if not ends:
@@ -727,6 +728,51 @@ def problem_set_problems(root: Path, files: list[Path], chapter_dirs: set[Path],
         for chapter, page in answer_pages[kind].items():
             if chapter not in chapters:
                 problems.append(f"{page.relative_to(root)}: chapter {chapter} has no problems page")
+    return problems
+
+
+# Language-learning books teach the best-supported way to learn (EDITORIAL.md,
+# "Method"): chapter 1 is "How to Learn <Language>" with the evidence in "Study and
+# Immersion: The Middle Path", and research is never invoked without its source.
+LANGUAGE_NAMES = {"ja": "Japanese", "zh": "Chinese", "es": "Spanish", "fr": "French"}
+METHOD_SECTION = "Study and Immersion: The Middle Path"
+UNSOURCED_RESEARCH = re.compile(
+    r"\b(?:stud(?:y|ies)|research(?:ers)?|scientists|experiments?|evidence)\s+"
+    r"(?:(?:has|have|had|consistently|clearly|also)\s+)?"
+    r"(?:show(?:s|ed|n)?|suggest(?:s|ed)?|prove[sd]?|found|finds|confirm(?:s|ed)?|indicate[sd]?)\b",
+    re.I)
+CITED_YEAR = re.compile(r"\b(?:1[89]|20)\d{2}\b")
+
+
+def method_problems(root: Path, files: list[Path], numbers: dict[Path, tuple[str, str]],
+                    lang: str) -> list[str]:
+    problems: list[str] = []
+    name = LANGUAGE_NAMES.get(lang, lang)
+    first = next((f for f, (kind, n) in numbers.items() if (kind, n) == ("chapter", "1")), None)
+    if first is None or not first.is_file():
+        problems.append(f"chapter 1 should be '# Chapter 1 — How to Learn {name}'")
+    else:
+        rel = first.relative_to(root.resolve())
+        text = to_book(first.read_text(encoding="utf-8"))
+        if not re.search(rf"^#\s+Chapter 1 — How to Learn {re.escape(name)}\s*$", text, re.M):
+            problems.append(f"{rel}: chapter 1 should be '# Chapter 1 — How to Learn {name}'")
+        sections = [f for f, (kind, n) in numbers.items()
+                    if kind == "section" and n.startswith("1.") and f.is_file()]
+        if not any(re.search(rf"^#\s+{re.escape(METHOD_SECTION)}\s*$",
+                             f.read_text(encoding="utf-8"), re.M) for f in sections):
+            problems.append(f"{rel.parent}: chapter 1 has no section '# {METHOD_SECTION}'")
+    for f in files:
+        rel = f.relative_to(root)
+        book = to_book(f.read_text(encoding="utf-8"))
+        for block in re.finditer(r"(?:[^\n]*\S[^\n]*(?:\n|$))+", book):
+            para = block.group(0)
+            if para.lstrip().startswith(("```", "|", "#")):
+                continue
+            m = UNSOURCED_RESEARCH.search(para)
+            if m and not CITED_YEAR.search(para):
+                n = book.count("\n", 0, block.start() + m.start()) + 1
+                problems.append(f"{rel}:{n}: research claim without its source "
+                                f"(name the study and year): {m.group(0)!r}")
     return problems
 
 
@@ -852,10 +898,17 @@ THEME_DIR = Path("tools") / "pdf"
 SKILL_THEME = Path(__file__).resolve().parent / "theme"
 THEME_FILES = ("EDITORIAL.md", "STYLE.md", "categories.json", "packages.tex", "theme.tex",
                "guide.lua", "highlight.theme", "mermaid-config.json")
-# Script fonts for language-learning books (guide.toml: language = "ja"). Only a
-# guide that declares the language gets them, so other guides stay light.
-# Each entry: (font folder in the theme, serif family, sans family).
-LANGUAGE_FONTS = {"ja": ("fonts-ja", "NotoSerifJP", "NotoSansJP")}
+# Languages a language-learning book can teach (guide.toml: language = "ja").
+# A language with its own script ships that script's fonts; only a guide that
+# declares it gets them, so other guides stay light. Each entry is (font folder
+# in the theme, serif family, sans family), or None for a Latin-script language,
+# which the body fonts already cover.
+LANGUAGE_FONTS = {
+    "ja": ("fonts-ja", "NotoSerifJP", "NotoSansJP"),
+    "zh": ("fonts-zh", "NotoSerifSC", "NotoSansSC"),
+    "es": None,
+    "fr": None,
+}
 
 
 def guide_language(root: Path) -> str | None:
@@ -876,7 +929,7 @@ def theme_pairs(root: Path) -> list[tuple[Path, Path]]:
     pairs = [(SKILL_THEME / n, local / n) for n in THEME_FILES]
     pairs += [(f, local / "fonts" / f.name) for f in sorted((SKILL_THEME / "fonts").glob("*"))]
     lang = guide_language(root)
-    if lang:
+    if lang and LANGUAGE_FONTS[lang]:
         folder = LANGUAGE_FONTS[lang][0]
         pairs += [(f, local / folder / f.name) for f in sorted((SKILL_THEME / folder).glob("*"))]
     pairs.append((Path(__file__).resolve(), root / "tools" / "build_guide_pdf.py"))
@@ -1002,7 +1055,7 @@ def theme_args(root: Path, theme: Path, build_dir: Path, edition: str) -> list[s
         + color("AccentTint", guide["cat_tint"])
     )
     lang = guide_language(root)
-    if lang:
+    if lang and LANGUAGE_FONTS[lang]:
         folder, serif, sans = LANGUAGE_FONTS[lang]
         brand += (cmd("GuideCJKFontPath", (theme / folder).resolve().as_posix() + "/")
                   + cmd("GuideCJKSerif", serif) + cmd("GuideCJKSans", sans))
@@ -1071,7 +1124,7 @@ def run_pandoc(combined_md: Path, pdf_out: Path, title: str, author: str | None,
     # DejaVu has no CJK glyphs, so text such as "Hello, 世界" would print blank.
     # With xelatex, pandoc's template loads xeCJK when CJKmainfont is set.
     # A language-learning book loads its script's own fonts in the theme.
-    language_fonts = themed and guide_language(root) is not None
+    language_fonts = themed and bool(LANGUAGE_FONTS.get(guide_language(root) or ""))
     cjk_font = find_cjk_font() if engine == "xelatex" and not language_fonts else None
     if cjk_font:
         cmd += ["-V", f"CJKmainfont={cjk_font}", "-V", f"CJKmonofont={cjk_font}"]
@@ -1093,6 +1146,8 @@ def run_pandoc(combined_md: Path, pdf_out: Path, title: str, author: str | None,
         filters += ["--lua-filter", str((theme / "guide.lua").resolve())]
     cmd[1:1] = filters
     env = mermaid_env(root, theme if themed else None, build_dir)
+    # The Lua filter needs the book's language to recognize example sentences.
+    env = {**(env or os.environ), "GUIDE_LANGUAGE": guide_language(root) or ""}
     if themed:
         # Render LaTeX with pandoc, then compile it ourselves in build/. pandoc's
         # own PDF step compiles with -output-directory, where makeindex can't

@@ -1,6 +1,6 @@
 # Grammar and Conjugation Tables
 
-These tables collect the forms you need most often. [Chapter 2](../02-building-sentences/README.md) explains how sentences are built and [chapter 3](../03-politeness/README.md) explains the politeness levels; the tables here are for quick lookup.
+These tables collect the forms you need most often. [Chapter 4](../04-building-sentences/README.md) explains how sentences are built and [chapter 5](../05-politeness/README.md) explains the politeness levels; the tables here are for quick lookup.
 
 ## Verb Groups
 
@@ -123,6 +123,6 @@ For verbs without a special form, the patterns お + stem + になる (respectfu
 
 <!--nav-->
 
-[← Previous: Kana Charts](01-kana-charts.md) | [Contents](../README.md) | [Next: Answers →](../answers/README.md)
+[← Previous: Kana Charts](01-kana-charts.md) | [Contents](../README.md) | [Next: Resources for Learning Japanese →](03-resources.md)
 
 <!--/nav-->

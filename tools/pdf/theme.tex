@@ -340,6 +340,7 @@
 % (preface, reference pages).
 \newcommand{\GuideLesson}[2]{% title, anchor
   \ifGuideInChapter
+    \clearpage % ship the previous page before the number changes (running head)
     \stepcounter{GuideLesson}%
     \GuideOpenerTitle{\arabic{GuideChapter}.\arabic{GuideLesson}}{#1}%
     \GuideLessonMarkSet{\arabic{GuideChapter}.\arabic{GuideLesson}\enspace #1}%
