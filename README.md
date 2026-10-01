@@ -1,124 +1,139 @@
-# The Japanese Guide 🗾
+<!--repo-only-->
+# The Japanese Guide
 
-> **Fun. Comprehensive. Yours.**
-> Whether you just want to order ramen without pointing at the menu, binge anime without subtitles, crush the JLPT N1, or close deals in Tokyo boardrooms — this guide has a path for you.
+*From First Kana to Real-World Fluency*
+
+A book for learning Japanese, written in Markdown so you can read it here on GitHub, and published as a typeset PDF on this repository's **Releases** page. It takes you from your first hiragana to the JLPT N1, and from textbook sentences to the Japanese people actually speak.
+
+**Start reading:** [Preface](#preface) · [Chapter 1 — The Writing System](01-writing-system/README.md) · [Table of Contents](#table-of-contents)
+<!--/repo-only-->
+
+<!--pdf-only
+# Preface
+-->
+
+<!--repo-only-->
+## Preface
+<!--/repo-only-->
+
+Japanese has a reputation. Three writing systems, verbs that wait patiently at the end of every sentence, and a politeness system that changes shape depending on who is in the room. Learners hear all this and decide it is impossible. It isn't. Japanese is remarkably regular once you see its logic: no grammatical gender, almost no irregular verbs, no articles, and a sound system you can master in an afternoon. The hard parts are real, but they are learnable, and every one of them has a reason behind it.
+
+This book is the map. It starts with the 46 sounds of hiragana and builds steadily: katakana and kanji, how sentences are put together, the vocabulary and phrases you need from day one, and the full range of politeness, from talking with friends to addressing a company president. Then it goes where textbooks rarely follow: the Japanese people actually speak, with its contractions, dialects, slang and the stylized voices of anime characters.
+
+Language never lives on its own, so the book also takes you into the world the words come from: trains and konbini, festivals and seasons, tea ceremony and J-pop, baseball and sumo, and two thousand years of history in brief. It ends with paths for specific goals: understanding anime and manga, reading the news, working in a Japanese company and passing every level of the JLPT.
+
+Two things will carry you further than any book. The first is showing up every day, even for ten minutes. The second is real Japanese made for Japanese people: shows, songs, games, streams and news. Everything here is designed to get you to that point faster and to make what you hear there make sense. 行きましょう (*ikimashō*). Let's go.
+
+## Who This Book Is For
+
+This book is for English speakers who want to learn Japanese, whatever the reason: travel, anime, a job in Tokyo, the JLPT or simple curiosity. It assumes no knowledge of Japanese at all. If you are a complete beginner, read Part I in order; it is the foundation for everything else. If you already know your kana and some grammar, skim chapter 1, then dip into the chapters that match your goals. Intermediate learners will find the most new material in Parts II and IV.
+
+## What You Need
+
+- A way to hear Japanese. Recordings matter from the first page, because the book can show you sounds but not play them. A free dictionary app with audio, such as Jisho or the dictionary built into your phone, is enough to start.
+- A notebook or flashcard app for kana and vocabulary. Spaced-repetition apps such as Anki make daily review fast.
+- Ten to thirty minutes a day. Short, regular practice beats long, rare sessions.
+
+The book describes Japanese as it is used in 2026. Slang, new politeness forms and anything else that changes quickly carries a date.
+
+## How This Book Is Organized
+
+**Part I, Foundations.** Chapter 1 covers the writing system: hiragana, katakana and kanji. Chapter 2 builds sentences from particles, verbs and adjectives, and adds the core vocabulary and set phrases you use every day. Chapter 3 explains politeness, from casual speech through polite Japanese to 敬語 (*keigo*, honorific language) and the "manual" keigo heard in every shop.
+
+**Part II, Japanese as It's Really Used.** Chapter 4 covers spoken Japanese: how it differs from the written language, the major dialects and the role language of anime and fiction. Chapter 5 follows the living language: internet slang, the newest words and how Japanese got here from its classical past.
+
+**Part III, Japanese in Context.** Chapter 6 gets you around Japan: trains, cities and regions, shopping and money, and what to say in an emergency. Chapter 7 covers customs and daily life: the unspoken rules, food, festivals and the seasons. Chapter 8 tours the arts, entertainment and sport, from tea ceremony and traditional music to J-pop, anime, Vtubers, baseball and sumo. Chapter 9 tells Japanese history in brief, from the earliest records to postwar Japan.
+
+**Part IV, Paths.** Chapter 10 is for anime fans, manga readers and anyone who wants to read the news. Chapter 11 covers business Japanese. Chapter 12 explains the JLPT and what each level from N5 to N1 asks of you.
+
+Each chapter is divided into numbered sections that end with a short summary, and closes with graded practice and a list of further reading. The answers to every practice item are in their own part at the back of the book, after the Reference pages (kana charts and grammar tables), and a glossary defines every key term.
+
+## Conventions Used in This Book
+
+Example sentences are set apart, with the Japanese first, then its romanization in italics, then the English:
+
+> 私は寿司を食べます。\
+> *Watashi wa sushi o tabemasu.*\
+> I eat sushi.
+
+Part I gives the romanization for every example. From Part II onward it appears only for new words and readings that aren't obvious, because by then you read kana. Romanization follows the modified Hepburn system, with macrons for long vowels (*tōkyō*, *arigatō*). Ordinary English text uses the familiar English spellings: Tokyo, Osaka, sushi. Bold type inside an example marks the form being taught, as in 私**は**学生です.
+
+When a Japanese term first appears in the text, its romanization and meaning follow in parentheses: 敬語 (*keigo*, honorific language). Readings of kanji follow in kana the first time a word appears: 食べる (たべる).
+
+Three kinds of callout stand apart from the text:
+
+> **Note:** Background, history or a clarification that's useful but not essential.
+
+> **Tip:** A shortcut, a memory trick or a better way to say something.
+
+> **Warning:** A trap: a common mistake, or something that sounds rude without your meaning it to.
+
+Sections titled **Going Deeper** are sidebars about history, linguistics and edge cases. You can skip them on a first reading and come back later. Terms are set in **bold** where they are defined, and every one of them is collected in the glossary at the end of the book.
+
+<!--repo-only-->
+## Table of Contents
+
+### Part I — Foundations
+
+- [Chapter 1 — The Writing System](01-writing-system/README.md): hiragana, katakana and kanji
+- [Chapter 2 — Building Sentences](02-building-sentences/README.md): grammar basics, core vocabulary, phrases and idioms
+- [Chapter 3 — Politeness and Register](03-politeness/README.md): casual, polite and honorific Japanese, and modern keigo
+
+### Part II — Japanese as It's Really Used
+
+- [Chapter 4 — Spoken Japanese](04-spoken-japanese/README.md): spoken versus written Japanese, dialects, role language
+- [Chapter 5 — The Living Language](05-living-language/README.md): internet language and slang, contemporary Japanese, how Japanese evolved
+
+### Part III — Japanese in Context
+
+- [Chapter 6 — Getting Around Japan](06-getting-around/README.md): trains, cities and regions, shopping and money, emergencies
+- [Chapter 7 — Customs and Daily Life](07-customs-and-daily-life/README.md): culture and norms, food, matsuri, seasons and nature
+- [Chapter 8 — Arts, Entertainment and Sport](08-arts-entertainment-and-sport/README.md): traditional arts and music, J-pop, pop culture, Vtubers, baseball and sumo
+- [Chapter 9 — History](09-history/README.md): Japanese history in brief, samurai and bushido, postwar Japan
+
+### Part IV — Paths
+
+- [Chapter 10 — Japanese for Media](10-japanese-for-media/README.md): anime, manga and the news
+- [Chapter 11 — Business Japanese](11-business-japanese/README.md): Japanese at work
+- [Chapter 12 — The JLPT](12-the-jlpt/README.md): how the test works, and levels N5 to N1
+
+### Back Matter
+
+- [Reference](reference/README.md): kana charts, grammar and conjugation tables
+- [Answers](answers/README.md): answers to every chapter's practice
+- [Glossary](99-glossary/README.md): every key term in the book, A to Z
+
+## Repository Structure
+
+```text
+the-japanese-guide/
+├── 01-writing-system/ … 12-the-jlpt/
+│   ├── README.md                            ← Chapter opener
+│   ├── 01-….md, 02-….md                     ← Sections, in reading order
+│   └── 99-practice-and-further-reading.md   ← Chapter end
+├── reference/                               ← Kana charts, grammar tables
+├── answers/                                 ← Answers to the practice, by chapter
+├── 99-glossary/                             ← Key terms, A–Z
+├── tools/                                   ← PDF build and house style
+├── guide.toml                               ← Title, category, edition, back-cover copy
+├── SUMMARY.md                               ← Reading order
+└── README.md                                ← You are here
+```
+
+## Building the PDF
+
+The PDF is built by GitHub Actions and attached to a release whenever a version tag is pushed (`git tag v1.0.0 && git push origin v1.0.0`). To build it locally you need pandoc 3.9 or later, XeLaTeX with the xeCJK package, and mermaid-filter:
+
+```bash
+python3 tools/build_guide_pdf.py --check   # navigation, structure and house style only
+python3 tools/build_guide_pdf.py --title "The Japanese Guide" --output the-japanese-guide.pdf
+```
+<!--/repo-only-->
 
 ---
 
-## 🌸 Welcome
+<!--nav-->
 
-Japanese is one of the most rewarding languages you can learn. It's also famously intimidating — three writing systems, a grammar structure unlike English, and a politeness system that shifts depending on who's in the room. But here's the secret: **none of it is as hard as it looks once you have a good map.**
+[Next: Chapter 1 — The Writing System →](01-writing-system/README.md)
 
-This guide is that map.
-
----
-
-## 🗺️ How to Use This Guide
-
-This isn't a textbook. You don't read it cover to cover (unless you want to — we won't stop you). Instead, start with the **Foundations**, then pick the **Track** that matches your goals and let it guide you deeper.
-
-### Step 1 — Learn the basics (everyone starts here)
-
-| Section | What you'll learn |
-|---|---|
-| [Hiragana](foundations/01-hiragana.md) | The 46 core sounds of Japanese — your first writing system |
-| [Katakana](foundations/02-katakana.md) | The script for foreign words, emphasis, and cool robot names |
-| [Kanji](foundations/03-kanji.md) | The deep end of the pool — we'll hand you a floatie |
-| [Grammar Basics](foundations/04-grammar-basics.md) | How Japanese sentences actually work |
-| [Core Vocabulary](foundations/05-vocabulary-core.md) | The 500 words that cover ~80% of daily conversation |
-| [Phrases & Idioms](foundations/06-phrases-and-idioms.md) | Sound natural from day one |
-| [Spoken vs. Written](foundations/07-spoken-vs-written.md) | Why the Japanese you hear doesn't match the Japanese you read |
-| [Internet & Slang](foundations/08-internet-and-slang.md) | wwww and other mysteries explained |
-| [Contemporary & Emerging Japanese](foundations/09-contemporary-japanese.md) | This year's slang, buzzwords, and the words that just flipped meaning |
-| [Role Language (役割語)](foundations/10-role-language.md) | Why anime characters don't talk like anyone you'll ever meet |
-
-### Step 2 — Understand politeness (it's unavoidable)
-
-| Section | What you'll learn |
-|---|---|
-| [Levels Overview](politeness/01-levels-overview.md) | The full spectrum from lazy casual to bowing-at-90-degrees formal |
-| [Casual Japanese](politeness/02-casual-japanese.md) | How to talk with friends without sounding like a textbook |
-| [Polite Japanese](politeness/03-polite-japanese.md) | The everyday standard — shops, strangers, most situations |
-| [Honorific Japanese](politeness/04-honorific-japanese.md) | 敬語 — the system that determines your career in Japan |
-| [Modern & "Manual" Keigo](politeness/05-modern-keigo.md) | バイト敬語 — the evolving politeness you'll hear at every konbini |
-
-### Step 3 — Absorb the culture
-
-| Section | What you'll learn |
-|---|---|
-| [Culture & Norms](culture/01-culture-and-norms.md) | Uchi/soto, silence, bowing, shoes — the unspoken rules |
-| [Food](culture/02-food.md) | Because you *will* be asked if you can eat natto |
-| [Matsuri](culture/03-matsuri.md) | Festivals, fireworks, and what to yell when you win a goldfish |
-| [Pop Culture](culture/04-pop-culture.md) | Anime, manga, games — the gateway drugs of Japanese learning |
-| [Dialects](culture/05-dialects.md) | Why Osaka people sound like they're always arguing (they're not) |
-| [Seasons & Nature](culture/06-seasons-and-nature.md) | Cherry blossoms, typhoons, and why season matters *constantly* |
-| [Traditional Arts](culture/07-traditional-arts.md) | Tea, kabuki, sumo, and the aesthetics that define Japan |
-| [Baseball & Sumo](culture/08-baseball-and-sumo.md) | The two national pastimes — 1,500 years of ritual meets America's game |
-| [Vtubers & Streaming](culture/09-vtuber-and-streaming.md) | Live-comment culture and the language of the media young Japan actually consumes |
-
-### Step 4 — Navigate real Japan
-
-| Section | What you'll learn |
-|---|---|
-| [Trains & Transit](practical/trains-and-transit.md) | IC cards, line changes, and why you missed the last train |
-| [Cities & Regions](practical/cities-and-regions.md) | Tokyo, Osaka, Kyoto, and beyond |
-| [Shopping & Money](practical/shopping-and-money.md) | Konbini life, department stores, and saying no to plastic bags |
-| [Emergencies](practical/emergencies.md) | Phrases you hope you never need but absolutely must know |
-
-### Step 5 — Go deep on history
-
-| Section | What you'll learn |
-|---|---|
-| [Historical Overview](history/overview.md) | 2,000 years in one page (roughly) |
-| [Samurai & Bushido](history/samurai-and-bushido.md) | Why honor culture still echoes in modern Japan |
-| [Postwar Japan](history/postwar-japan.md) | How defeat became a cultural renaissance |
-| [Language Evolution](history/language-evolution.md) | From classical Japanese to emoji |
-
-### Music
-
-| Section | What you'll learn |
-|---|---|
-| [J-Pop](music/j-pop.md) | The soundtrack of modern Japan |
-| [Traditional Music](music/traditional-music.md) | Enka, gagaku, and why grandma cries at certain songs |
-
----
-
-## 🎯 Choose Your Track
-
-Already past the basics? Jump into the track that fits your vibe:
-
-| Track | For you if... |
-|---|---|
-| [🎌 Anime Lover](tracks/anime-lover.md) | You want to understand characters without subtitles |
-| [📚 Manga Reader](tracks/manga-reader.md) | You want to read panels left to right (wait, that's wrong) |
-| [💼 Business Japanese](tracks/business-japanese.md) | You're moving to Tokyo or dealing with Japanese clients |
-| [📰 News Japanese](tracks/news-japanese.md) | You want to read NHK and understand what's actually happening |
-| [🎓 JLPT N5](tracks/jlpt/n5.md) | You're starting from zero and want a certificate to prove it |
-| [🎓 JLPT N4](tracks/jlpt/n4.md) | Survival-level conversations, building confidence |
-| [🎓 JLPT N3](tracks/jlpt/n3.md) | The great leap into intermediate territory |
-| [🎓 JLPT N2](tracks/jlpt/n2.md) | Near-fluent, required for many Japanese universities/jobs |
-| [🎓 JLPT N1](tracks/jlpt/n1.md) | The summit. Few reach it. You might. |
-
----
-
-## 💡 A Few Things to Know Before You Start
-
-**Japanese has no spaces.** Words run together. You'll adapt.
-
-**Pitch accent exists.** 橋 (bridge) and 箸 (chopsticks) sound almost identical. Context saves you 99% of the time.
-
-**There is no "perfect" order.** Kanji and grammar can be learned side by side. Do what keeps you showing up every day.
-
-**Immersion is the secret weapon.** Every guide, app, and flashcard is just scaffolding. The real learning happens when you consume Japanese made *for* Japanese people.
-
----
-
-*Let's go. 行きましょう！*
-
-<!-- nav-footer:start -->
-
----
-
-[Begin →](foundations/01-hiragana.md)
-
-<!-- nav-footer:end -->
+<!--/nav-->

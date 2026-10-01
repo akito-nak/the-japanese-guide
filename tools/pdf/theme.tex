@@ -1,0 +1,619 @@
+% ============================================================================
+% Guide theme: the shared visual identity for every guide's PDF.
+%
+% Loaded by pandoc after its own preamble (--include-in-header). Guide-specific
+% values (title, category, colours, motif, trademarks, blurb) and build values
+% (font path, edition, date) come from build/brand.tex, which build_guide_pdf.py
+% generates from guide.toml and categories.json. See STYLE.md for the visual
+% rationale and EDITORIAL.md for the house style the components serve.
+% ============================================================================
+
+% ── Page grid ─────────────────────────────────────────────────────────────────
+% A 7.5 x 9.25 in trim, the size of many programming books, with generous
+% margins so lines stay a comfortable 70-80 characters long.
+\geometry{
+  paperwidth=7.5in, paperheight=9.25in,
+  top=0.95in, bottom=0.95in, left=0.85in, right=0.85in,
+  headheight=14pt, headsep=18pt, footskip=30pt,
+}
+
+% ── Colour palette ────────────────────────────────────────────────────────────
+% Neutrals are shared by every guide; Accent* come from brand.tex.
+\definecolor{Ink}{HTML}{1E2329}        % body text
+\definecolor{Muted}{HTML}{69707A}      % running heads, captions, labels
+\definecolor{Faint}{HTML}{A7ADB5}      % hairlines on dark, placeholders
+\definecolor{Rule}{HTML}{E3E0D8}       % hairlines, table rules, box borders
+\definecolor{Panel}{HTML}{F7F6F2}      % code panels, table stripes
+\definecolor{Night}{HTML}{16202E}      % cover, chapter bands, part pages
+\definecolor{NightSoft}{HTML}{223044}  % motif strokes on Night
+\definecolor{NoteInk}{HTML}{3B5B8C}    % Note callouts
+\definecolor{NoteTint}{HTML}{EEF2F8}
+\definecolor{WarnInk}{HTML}{B45309}    % Warning callouts
+\definecolor{WarnTint}{HTML}{FDF4E6}
+\color{Ink}
+
+% ── Typography ────────────────────────────────────────────────────────────────
+% Source Serif 4 for reading, Inter for structure (headings, labels, tables),
+% JetBrains Mono for code. All three are SIL Open Font License fonts shipped
+% with the guide, so every build looks identical.
+\setmainfont{SourceSerif4}[
+  Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-Regular, ItalicFont=*-It,
+  BoldFont=*-Semibold, BoldItalicFont=*-SemiboldIt,
+  Scale=1.0, Ligatures=TeX, Numbers=OldStyle]
+\setsansfont{Inter}[
+  Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-Regular, ItalicFont=*-Italic,
+  BoldFont=*-SemiBold, BoldItalicFont=*-Italic,
+  Scale=MatchLowercase, Ligatures=TeX]
+\setmonofont{JetBrainsMono}[
+  Path=\GuideFontPath, Extension=.ttf,
+  UprightFont=*-Regular, ItalicFont=*-Italic,
+  BoldFont=*-Bold, BoldItalicFont=*-BoldItalic,
+  Scale=MatchLowercase, HyphenChar=None,
+  RawFeature={-calt;-liga}]% no ligatures (=> stays =>) and no hyphens in code
+\newfontfamily\HeadFont{Inter}[Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-Bold, BoldFont=*-ExtraBold, Scale=MatchLowercase, Ligatures=TeX]
+\newfontfamily\HeadSemi{Inter}[Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-SemiBold, BoldFont=*-Bold, Scale=MatchLowercase, Ligatures=TeX]
+\newfontfamily\LabelFont{Inter}[Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-Medium, BoldFont=*-SemiBold, Scale=MatchLowercase,
+  LetterSpace=6, Ligatures=TeX]
+\newfontfamily\DisplayFont{Inter}[Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-ExtraBold, BoldFont=*-Black, Scale=MatchLowercase, WordSpace={1.9,1,1},
+  Ligatures=TeX]
+% A symbol fallback for characters the code font lacks, such as the test
+% runner's check marks (used by guide.lua through \GuideSym).
+\newfontfamily\GuideSymbolFont{DejaVuSans}[Path=\GuideFontPath, Extension=.ttf,
+  Scale=MatchLowercase]
+\newcommand{\GuideSym}[1]{{\GuideSymbolFont #1}}
+\newfontfamily\LiningSerif{SourceSerif4}[Path=\GuideFontPath, Extension=.otf,
+  UprightFont=*-Regular, ItalicFont=*-It, BoldFont=*-Semibold, Numbers=Lining,
+  Ligatures=TeX]
+
+% ── Script fonts (opt-in) ─────────────────────────────────────────────────────
+% A guide that teaches a language with its own script (guide.toml:
+% language = "ja") gets that script's fonts through xeCJK: Noto Serif JP beside
+% Source Serif 4 in the body, Noto Sans JP beside Inter in headings, labels and
+% tables. brand.tex defines \GuideCJKFontPath only for such guides, so every
+% other guide builds exactly as before.
+\ifdefined\GuideCJKFontPath
+  \usepackage{xeCJK}
+  \setCJKmainfont{\GuideCJKSerif}[Path=\GuideCJKFontPath, Extension=.otf,
+    UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Regular,
+    BoldItalicFont=*-Bold]
+  \setCJKsansfont{\GuideCJKSans}[Path=\GuideCJKFontPath, Extension=.otf,
+    UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Regular,
+    BoldItalicFont=*-Bold]
+  \setCJKmonofont{\GuideCJKSans}[Path=\GuideCJKFontPath, Extension=.otf,
+    UprightFont=*-Regular, BoldFont=*-Bold]
+  \setCJKfamilyfont{GuideCJKHead}{\GuideCJKSans}[Path=\GuideCJKFontPath,
+    Extension=.otf, UprightFont=*-Bold, BoldFont=*-Bold]
+  \setCJKfamilyfont{GuideCJKLabel}{\GuideCJKSans}[Path=\GuideCJKFontPath,
+    Extension=.otf, UprightFont=*-Regular, BoldFont=*-Bold]
+  % Headings and labels set their Latin face with \HeadFont and friends; give
+  % each the matching Japanese sans so a heading never mixes in the serif.
+  \let\GuideLatinHeadFont\HeadFont
+  \renewcommand{\HeadFont}{\GuideLatinHeadFont\CJKfamily{GuideCJKHead}}
+  \let\GuideLatinHeadSemi\HeadSemi
+  \renewcommand{\HeadSemi}{\GuideLatinHeadSemi\CJKfamily{GuideCJKHead}}
+  \let\GuideLatinLabelFont\LabelFont
+  \renewcommand{\LabelFont}{\GuideLatinLabelFont\CJKfamily{GuideCJKLabel}}
+  \let\GuideLatinDisplayFont\DisplayFont
+  \renewcommand{\DisplayFont}{\GuideLatinDisplayFont\CJKfamily{GuideCJKHead}}
+  % Western punctuation stays with the Western text around it; xeCJK would
+  % otherwise set curly quotes, dashes and ellipses full width ("Let’ s").
+  \xeCJKDeclareCharClass{Default}{"00B7, "2013, "2014, "2018, "2019, "201C,
+    "201D, "2026}
+  % Box drawing and math symbols appear in kaomoji (┻━┻, (ﾟ∀ﾟ)); the Latin
+  % fonts lack them and the Japanese fonts have them.
+  \xeCJKDeclareCharClass{CJK}{"2200 -> "22FF, "2500 -> "257F}
+\fi
+
+\linespread{1.18}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62em plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Inline code: monospaced in a deeper shade of the accent, so it reads as code
+% without a box that would break across lines.
+\let\GuideOrigTexttt\texttt
+% (\leavevmode stops a colour change at the start of a table cell or list item
+% from opening an empty line.)
+\renewcommand{\texttt}[1]{\leavevmode{\color{AccentDark}\GuideOrigTexttt{#1}}}
+
+% Links: accent colour, no boxes. Internal and external links look the same;
+% readers of a book should not need to know the difference.
+% (pandoc loads hyperref after this file, so apply the settings at \begin{document}.)
+\AtBeginDocument{%
+  \hypersetup{colorlinks=true, linkcolor=AccentDark, urlcolor=AccentDark,
+    citecolor=AccentDark, filecolor=AccentDark,
+    pdfauthor={}, pdfcreator={}, pdfsubject={\GuideSubtitle}}%
+  \urlstyle{same}}
+\PassOptionsToPackage{hypertexnames=false}{hyperref}
+
+% Lists: accent bullets, a little air, aligned with the text block.
+\setlist{itemsep=0.25em, topsep=0.35em, parsep=0.15em, leftmargin=1.5em}
+\setlist[itemize,1]{label={\color{Accent}\small\textbullet}}
+\setlist[itemize,2]{label={\color{Muted}\scriptsize\textendash}}
+\setlist[enumerate,1]{label={\sffamily\small\bfseries\color{AccentDark}\arabic*.}}
+\renewcommand{\tightlist}{\setlength{\itemsep}{0.18em}\setlength{\parskip}{0pt}}
+
+% Figures and diagrams: never wider than the text or taller than about half a
+% page, so a figure and its caption always fit on one page. (pandoc 3.x sizes
+% images with \pandocbounded, which would otherwise allow a full page.)
+\makeatletter
+\def\maxheight{\ifdim\Gin@nat@height>0.5\textheight 0.5\textheight\else\Gin@nat@height\fi}
+\newsavebox\GuideImageBox
+\AtBeginDocument{%
+  % pandoc defines \pandocbounded only for books with images; define it here so
+  % a book without any (the Japanese guide) still compiles.
+  \providecommand*\pandocbounded[1]{#1}%
+  \renewcommand*\pandocbounded[1]{%
+    \sbox\GuideImageBox{#1}%
+    \Gscale@div\@tempa{0.55\textheight}{\dimexpr\ht\GuideImageBox+\dp\GuideImageBox\relax}%
+    \Gscale@div\@tempb{\linewidth}{\wd\GuideImageBox}%
+    \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi
+    \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\GuideImageBox}%
+    \else\usebox{\GuideImageBox}\fi}}
+\makeatother
+
+% ── Section headings (inside a lesson) ────────────────────────────────────────
+\titleformat{\section}
+  {\HeadFont\fontsize{15}{19}\selectfont\color{Ink}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.9em plus 0.4em}{0.5em}
+\titleformat{\subsection}
+  {\HeadSemi\fontsize{11.5}{15}\selectfont\color{AccentDark}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1.4em plus 0.3em}{0.3em}
+\titleformat{\subsubsection}
+  {\HeadSemi\normalsize\color{Ink}}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{1.1em}{0.2em}
+\titleformat{\paragraph}[runin]
+  {\HeadSemi\normalsize\color{Ink}}{}{0pt}{}[.]
+
+% "Going deeper" subsections get a small label above the title.
+\newcommand{\GuideDeeper}[1]{%
+  \par\vspace{1.2em}\needspace{5\baselineskip}%
+  {\LabelFont\scriptsize\color{Muted}GOING DEEPER}\par\vspace{0.1em}%
+  {\HeadSemi\fontsize{11.5}{15}\selectfont\color{AccentDark}#1}\par\vspace{0.25em}}
+
+% ── Running heads and folios ──────────────────────────────────────────────────
+\newcommand{\GuideChapterMark}{}
+\newcommand{\GuideLessonMark}{}
+\fancypagestyle{guide}{%
+  \fancyhf{}%
+  \fancyhead[L]{\LabelFont\scriptsize\color{Muted}\MakeUppercase{\GuideChapterMark}}%
+  \fancyhead[R]{\sffamily\scriptsize\color{Muted}\GuideLessonMark}%
+  \fancyfoot[L]{\sffamily\scriptsize\color{Faint}\GuideTitle}%
+  \fancyfoot[R]{\HeadSemi\small\color{AccentDark}\thepage}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+  \renewcommand{\headrule}{{\color{Rule}\hrule height\headrulewidth width\headwidth}}%
+  \renewcommand{\footrulewidth}{0pt}}
+\fancypagestyle{opener}{%
+  \fancyhf{}%
+  \fancyfoot[R]{\HeadSemi\small\color{AccentDark}\thepage}%
+  \renewcommand{\headrulewidth}{0pt}\renewcommand{\footrulewidth}{0pt}}
+\fancypagestyle{plain}{% LaTeX's own \chapter and \part pages use this
+  \fancyhf{}\fancyfoot[R]{\HeadSemi\small\color{AccentDark}\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
+\pagestyle{guide}
+
+% ── Motifs (cover, chapter bands, part pages) ─────────────────────────────────
+% Each guide picks one in brand.tex; the geometry is shared.
+\tikzset{
+  motif hex/.pic={\draw[line width=0.7pt] (0:1) \foreach \a in {60,120,...,359} {-- (\a:1)} -- cycle;},
+}
+\newcommand{\GuideMotifHexagons}[4]{% colour, x0, y0, rows
+  \foreach \r in {0,...,#4} {\foreach \c in {0,...,9} {
+    \pgfmathsetmacro{\x}{#2 + \c*1.5}\pgfmathsetmacro{\y}{#3 + \r*1.732 + mod(\c,2)*0.866}
+    \path[draw=#1] (\x,\y) pic[scale=0.82] {motif hex};}}}
+\newcommand{\GuideMotifDots}[4]{%
+  \foreach \r in {0,...,#4} {\foreach \c in {0,...,22} {
+    \fill[#1] (#2 + \c*0.6, #3 + \r*0.6) circle (0.05);}}}
+% A few highlighted cells on the same grid (column, row pairs), for the accent.
+\newcommand{\GuideMotifHexCells}[2]{% colour, list of c/r
+  \foreach \c/\r in {#2} {
+    \pgfmathsetmacro{\x}{\c*1.5}\pgfmathsetmacro{\y}{\r*1.732 + mod(\c,2)*0.866}
+    \path[draw=#1, line width=1pt] (\x,\y) pic[scale=0.82] {motif hex};}}
+\newcommand{\GuideMotifDotCells}[2]{%
+  \foreach \c/\r in {#2} {\fill[#1] (\c*0.6, \r*0.6) circle (0.09);}}
+\newcommand{\GuideMotifAccent}[2]{%
+  \ifdefstring{\GuideMotifName}{hexagons}{\GuideMotifHexCells{#1}{#2}}{\GuideMotifDotCells{#1}{#2}}}
+\newcommand{\GuideMotif}[4]{%
+  \ifdefstring{\GuideMotifName}{hexagons}{\GuideMotifHexagons{#1}{#2}{#3}{#4}}{\GuideMotifDots{#1}{#2}{#3}{#4}}}
+
+% ── Cover and colophon ────────────────────────────────────────────────────────
+\newcommand{\GuideCover}{%
+  \begin{titlepage}
+  \pagenumbering{alph}% keep cover page labels apart from the numbered pages
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[Night] (current page.south west) rectangle (current page.north east);
+    \begin{scope}[shift={(current page.south east)}, xshift=-11cm, yshift=-0.5cm]
+      \clip (0,0) rectangle (11.5cm, 11cm);
+      \GuideMotif{NightSoft}{0}{0}{6}
+      \GuideMotifAccent{AccentBright}{4/1, 5/1, 5/2}
+    \end{scope}
+    \fill[AccentBright] ([xshift=0.85in, yshift=-1.55in]current page.north west) rectangle ++(1.1in, 5pt);
+    \node[anchor=north west, text width=5.6in, inner sep=0pt, align=left]
+      at ([xshift=0.85in, yshift=-0.95in]current page.north west)
+      {\LabelFont\small\color{AccentBright}\MakeUppercase{\GuideCategory}};
+    \node[anchor=north west, text width=5.8in, inner sep=0pt, align=left]
+      at ([xshift=0.85in, yshift=-1.9in]current page.north west)
+      {\hyphenpenalty=10000\exhyphenpenalty=10000\raggedright
+       {\HeadFont\bfseries\fontsize{46}{52}\selectfont\spaceskip=0.26em\relax\color{white}\GuideTitle\par}
+       \vspace{18pt}
+       {\LiningSerif\itshape\fontsize{15}{21}\selectfont\color{Faint}\GuideSubtitle\par}};
+    \node[anchor=south west, inner sep=0pt, align=left, text width=4.5in]
+      at ([xshift=0.85in, yshift=0.8in]current page.south west)
+      {\setlength{\parskip}{0pt}%
+       {\HeadSemi\small\color{white}\GuideCoverage\par}\vspace{5pt}%
+       {\LabelFont\scriptsize\color{Faint}\MakeUppercase{\GuideEditionLine}\par}};
+  \end{tikzpicture}
+  \end{titlepage}
+  % Copyright page on the back of the cover.
+  \thispagestyle{empty}
+  \null\vfill
+  {\sffamily\scriptsize\color{Muted}\setlength{\parskip}{0.8em}\raggedright
+   {\HeadSemi\small\color{Ink}\GuideTitle}\par\vspace{-0.6em}
+   \GuideSubtitle\par
+   \GuideEditionLine. \GuideCoverage.\par
+   \GuideCopyright\par
+   \GuideTrademarks\par
+   The information in this book is distributed on an ``as is'' basis, without
+   warranty. Every effort has been made to ensure its accuracy, but neither the
+   publisher nor the authors accept liability for any loss or damage caused, or
+   alleged to have been caused, directly or indirectly by the instructions or
+   code it contains.\par
+   Set in Source Serif 4, Inter and JetBrains Mono. Built \GuideBuildDate.\par}
+  \clearpage
+  \pagenumbering{roman}
+  \pagestyle{opener}}
+\renewcommand{\maketitle}{\GuideCover}
+
+% ── Contents ──────────────────────────────────────────────────────────────────
+\renewcommand{\contentsname}{Contents}
+\titlecontents{part}[2.3em]{\addvspace{0.95em}\HeadSemi\normalsize\color{Ink}}
+  {\contentslabel[{\color{Accent}\thecontentslabel}]{2.3em}}{\hspace*{-2.3em}}
+  {\hfill\color{AccentDark}\contentspage}[\vspace{0.1em}]
+\titlecontents{chapter}[4.9em]{\addvspace{0.05em}\LiningSerif\small\color{Ink}}
+  {\contentslabel[{\sffamily\footnotesize\color{Muted}\thecontentslabel}]{2.6em}}{\hspace*{-2.6em}}
+  {\titlerule*[0.7em]{\color{Rule}.}\sffamily\footnotesize\color{Muted}\contentspage}
+\makeatletter
+\renewcommand{\tableofcontents}{%
+  \GuideOpenerTitle{}{\contentsname}%
+  \GuideChapterMarkSet{Contents}\GuideLessonMarkSet{}%
+  \setcounter{tocdepth}{0}% chapters and lessons only
+  \@starttoc{toc}\clearpage}
+\makeatother
+
+% ── Openers ───────────────────────────────────────────────────────────────────
+\newcounter{GuideChapter}
+\newcounter{GuideLesson}[GuideChapter]
+\newif\ifGuideInChapter
+\newif\ifGuideMainMatter
+\newcommand{\GuideChapterMarkSet}[1]{\renewcommand{\GuideChapterMark}{#1}}
+\newcommand{\GuideLessonMarkSet}[1]{\renewcommand{\GuideLessonMark}{#1}}
+\newcommand{\GuideStartMainMatter}{%
+  \ifGuideMainMatter\else\GuideMainMattertrue\clearpage\pagenumbering{arabic}\pagestyle{guide}\fi}
+
+% A lesson-style opener title: an optional small label, the title, an accent rule.
+\newcommand{\GuideOpenerTitle}[2]{%
+  \clearpage\thispagestyle{opener}%
+  \vspace*{0.35in}%
+  {\setlength{\parskip}{0pt}%
+   \ifstrempty{#1}{}{{\HeadSemi\fontsize{12}{14}\selectfont\color{Accent}#1}\par\vspace{8pt}}%
+   {\HeadFont\fontsize{23}{28}\selectfont\color{Ink}\raggedright #2\par}%
+   \vspace{12pt}{\color{Accent}\rule{0.9in}{2.2pt}}\par}%
+  \vspace{22pt}}
+
+% Chapter opener: a Night band across the top of the page with the chapter
+% number and title; the chapter introduction follows on the same page.
+\newcommand{\GuideChapter}[3]{% number, title, anchor
+  \GuideStartMainMatter
+  \clearpage\thispagestyle{opener}%
+  \GuideInChaptertrue
+  \setcounter{GuideChapter}{#1}%
+  % \setcounter doesn't reset dependent counters, so reset them here.
+  \setcounter{GuideLesson}{0}\setcounter{GuideFigure}{0}%
+  \GuideChapterMarkSet{Chapter #1 · #2}\GuideLessonMarkSet{Introduction}%
+  \phantomsection\hypertarget{#3}{}\GuideSetLabel{#1}\label{#3}%
+  \addcontentsline{toc}{part}{\protect\numberline{#1}#2}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[Night] (current page.north west) rectangle ([yshift=-3.05in]current page.north east);
+    \begin{scope}[shift={([xshift=-5.2in, yshift=-3.05in]current page.north east)}]
+      \clip (0,0) rectangle (5.2in, 3.05in);
+      \GuideMotif{NightSoft}{0.4}{-0.4}{5}
+    \end{scope}
+    \fill[Accent] ([yshift=-3.05in]current page.north west) rectangle ([yshift=-3.12in]current page.north east);
+    \node[anchor=south west, inner sep=0pt, align=left, text width=5.6in]
+      at ([xshift=0.85in, yshift=-2.62in]current page.north west)
+      {{\LabelFont\small\color{AccentBright}CHAPTER\par}\vspace{2pt}%
+       {\DisplayFont\fontsize{58}{58}\selectfont\color{white}#1\par}\vspace{12pt}%
+       {\HeadFont\fontsize{25}{30}\selectfont\color{white}\raggedright #2\par}};
+  \end{tikzpicture}%
+  \vspace*{2.35in}\par}
+
+% Lesson opener: numbered N.k inside a chapter, unnumbered outside one
+% (preface, reference pages).
+\newcommand{\GuideLesson}[2]{% title, anchor
+  \ifGuideInChapter
+    \stepcounter{GuideLesson}%
+    \GuideOpenerTitle{\arabic{GuideChapter}.\arabic{GuideLesson}}{#1}%
+    \GuideLessonMarkSet{\arabic{GuideChapter}.\arabic{GuideLesson}\enspace #1}%
+  \else
+    \GuideOpenerTitle{}{#1}%
+    \GuideChapterMarkSet{#1}\GuideLessonMarkSet{}%
+  \fi
+  \vspace{-22pt}\phantomsection\hypertarget{#2}{}%
+  \ifGuideInChapter\GuideSetLabel{\arabic{GuideChapter}.\arabic{GuideLesson}}\fi\label{#2}%
+  \ifGuideInChapter
+    \addcontentsline{toc}{chapter}{\protect\numberline{\arabic{GuideChapter}.\arabic{GuideLesson}}#1}%
+  \else
+    \addcontentsline{toc}{chapter}{#1}%
+  \fi
+  \vspace{22pt}}
+
+% Chapter-end page (Exercises and Further Reading, Questions and Sources):
+% inside the chapter, but unnumbered.
+\newcommand{\GuideChapterEnd}[2]{% title, anchor
+  \GuideOpenerTitle{}{#1}%
+  \GuideLessonMarkSet{#1}%
+  \vspace{-22pt}\phantomsection\hypertarget{#2}{}\label{#2}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{}#1}%
+  \vspace{22pt}}
+\makeatletter
+\newcommand{\GuideSetLabel}[1]{\protected@edef\@currentlabel{#1}}
+\makeatother
+
+% Part page: a full Night page (used for "Reference").
+\newcommand{\GuidePart}[2]{% title, anchor
+  \GuideStartMainMatter
+  \clearpage\thispagestyle{empty}\GuideInChapterfalse
+  \phantomsection\hypertarget{#2}{}\label{#2}%
+  \addcontentsline{toc}{part}{#1}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[Night] (current page.south west) rectangle (current page.north east);
+    \begin{scope}[shift={(current page.south east)}, xshift=-11cm, yshift=-0.5cm]
+      \clip (0,0) rectangle (11.5cm, 9cm);\GuideMotif{NightSoft}{0}{0}{5}
+    \end{scope}
+    \fill[AccentBright] ([xshift=0.85in, yshift=-3.3in]current page.north west) rectangle ++(0.9in, 4pt);
+    \node[anchor=north west, inner sep=0pt]
+      at ([xshift=0.85in, yshift=-3.55in]current page.north west)
+      {\DisplayFont\fontsize{40}{44}\selectfont\color{white}#1};
+  \end{tikzpicture}%
+  \null\clearpage}
+
+% Book parts: "Part II — Title" groups chapters. In a book that has them, the
+% back-matter parts (Hints, Solutions, Reference) use the same page, unnumbered,
+% so every part sits at the same level in the contents and the PDF outline.
+\newcommand{\GuideTocPart}[3]{% numeral (may be empty), title, anchor
+  \par\addvspace{1.5em}\Needspace*{5\baselineskip}%
+  {\setlength{\parskip}{0pt}\noindent
+   \ifstrempty{#1}{}{{\LabelFont\scriptsize\color{Accent}PART #1}\par\vspace{2pt}\noindent}%
+   {\HeadFont\fontsize{12}{15}\selectfont\hyperlink{#3}{\color{Ink}#2}}\par
+   \vspace{5pt}{\color{Rule}\hrule height 0.5pt}\par}%
+  \vspace{0.35em}}
+\newcommand{\GuideBookPart}[4]{% numeral (may be empty), title, anchor, bookmark text
+  \GuideStartMainMatter
+  \clearpage\thispagestyle{empty}\GuideInChapterfalse
+  \phantomsection\hypertarget{#3}{}\label{#3}%
+  \pdfbookmark[-2]{#4}{#3-part}%
+  \addtocontents{toc}{\protect\GuideTocPart{#1}{#2}{#3}}%
+  \GuideChapterMarkSet{#2}\GuideLessonMarkSet{}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[Night] (current page.south west) rectangle (current page.north east);
+    \begin{scope}[shift={(current page.south east)}, xshift=-11cm, yshift=-0.5cm]
+      \clip (0,0) rectangle (11.5cm, 9cm);\GuideMotif{NightSoft}{0}{0}{5}
+      \GuideMotifAccent{AccentBright}{5/1, 6/1}
+    \end{scope}
+    \node[anchor=south west, inner sep=0pt, align=left, text width=5.6in]
+      at ([xshift=0.85in, yshift=-3.25in]current page.north west)
+      {\ifstrempty{#1}{}{{\LabelFont\small\color{AccentBright}PART\par}\vspace{2pt}%
+        {\DisplayFont\fontsize{58}{58}\selectfont\color{white}#1\par}\vspace{14pt}}%
+       {\color{AccentBright}\rule{0.9in}{4pt}}\par};
+    \node[anchor=north west, inner sep=0pt, align=left, text width=5.6in]
+      at ([xshift=0.85in, yshift=-3.55in]current page.north west)
+      {\raggedright\DisplayFont\fontsize{34}{40}\selectfont\color{white}#2};
+  \end{tikzpicture}%
+  \null\clearpage}
+
+% ── Problem sets ──────────────────────────────────────────────────────────────
+% Problems at the end of each chapter; hints and solutions in their own parts at
+% the back, so a reader never sees an answer by accident. Each problem, hint and
+% solution links to the others by page number.
+\newcommand{\GuideDifficulty}[2]{% level 1-3, label
+  \tikz[baseline=-0.6ex]{\foreach \i in {1,2,3}{%
+    \ifnum\i>#1\relax\fill[Rule] (\i*0.2,0) circle (0.06);%
+    \else\fill[Accent] (\i*0.2,0) circle (0.06);\fi}}%
+  \hspace{0.3em}{\LabelFont\scriptsize\color{Muted}\MakeUppercase{#2}}}
+\newcommand{\GuideProblemRule}{{\color{Rule}\hrule height 0.6pt}\par\vspace{0.8em}}
+\newcommand{\GuideProblem}[6]{% number, title, level, difficulty, target, signatures
+  \par\addvspace{1.7em}\Needspace*{12\baselineskip}%
+  \GuideProblemRule
+  \phantomsection\hypertarget{problem-#1}{}\GuideSetLabel{#1}\label{problem-#1}%
+  {\setlength{\parskip}{0pt}\noindent
+   {\LabelFont\scriptsize\bfseries\color{AccentDark}PROBLEM #1}%
+   \ifstrempty{#4}{}{\hspace{1em}\GuideDifficulty{#3}{#4}}\par
+   \vspace{0.4em}{\HeadFont\fontsize{13.5}{17}\selectfont\color{Ink}\raggedright #2\par}%
+   \ifstrempty{#6}{}{\vspace{0.35em}{\small\raggedright #6\par}}%
+   \ifstrempty{#5}{}{\vspace{0.3em}{\LabelFont\tiny\color{Muted}TARGET}\hspace{0.5em}%
+     {\sffamily\footnotesize\color{Ink}#5}\par}}%
+  \vspace{0.25em}}
+\newcommand{\GuideProblemLabel}[1]{%
+  \par\Needspace*{4\baselineskip}\vspace{0.2em}{\LabelFont\scriptsize\bfseries\color{Muted}\MakeUppercase{#1}}\par\vspace{-0.3em}}
+\newcommand{\GuideProblemEnd}[3]{% number, has hint (0/1), has solution (0/1)
+  \par\vspace{0.1em}{\raggedleft\sffamily\scriptsize
+   \ifnum#2=1 \hyperref[hint-#1]{Hint, page~\pageref*{hint-#1}}\fi
+   \ifnum#2#3=11 {\color{Faint}\enspace·\enspace}\fi
+   \ifnum#3=1 \hyperref[solution-#1]{Solution, page~\pageref*{solution-#1}}\fi\par}}
+% The per-chapter pages inside the Hints and Solutions parts. Solutions start a
+% new page per chapter; hints run on, since each chapter's hints are short.
+\newcommand{\GuideAnswerPage}[5]{% part name, chapter number, chapter title, anchor, new page (0/1)
+  \ifnum#5=1
+    \GuideOpenerTitle{Chapter #2}{#3}\vspace{-22pt}%
+  \else
+    \par\addvspace{2em}\Needspace*{16\baselineskip}%
+    {\setlength{\parskip}{0pt}%
+     {\HeadSemi\fontsize{10}{12}\selectfont\color{Accent}Chapter #2}\par\vspace{4pt}%
+     {\HeadFont\fontsize{17}{21}\selectfont\color{Ink}\raggedright #3\par}%
+     \vspace{8pt}{\color{Accent}\rule{0.7in}{2pt}}\par}%
+  \fi
+  \phantomsection\hypertarget{#4}{}\label{#4}%
+  \pdfbookmark[0]{Chapter #2 — #3}{#4-bm}%
+  \GuideChapterMarkSet{#1}\GuideLessonMarkSet{Chapter #2\enspace #3}%
+  \ifnum#5=1 \addcontentsline{toc}{chapter}{\protect\numberline{#2}#3}\fi
+  \vspace{\ifnum#5=1 22pt\else 6pt\fi}}
+\newcommand{\GuideHint}[2]{% number, title
+  \par\addvspace{1.2em}\Needspace*{5\baselineskip}%
+  \phantomsection\hypertarget{hint-#1}{}\GuideSetLabel{#1}\label{hint-#1}%
+  {\setlength{\parskip}{0pt}\noindent
+   {\LabelFont\scriptsize\bfseries\color{AccentDark}HINT #1}\hspace{0.8em}%
+   {\HeadSemi\normalsize\color{Ink}#2}\hfill
+   {\sffamily\scriptsize\hyperref[problem-#1]{Problem, page~\pageref*{problem-#1}}}\par}%
+  \vspace{0.15em}}
+\newcommand{\GuideSolution}[2]{% number, title
+  \par\addvspace{1.9em}\Needspace*{10\baselineskip}%
+  \GuideProblemRule
+  \phantomsection\hypertarget{solution-#1}{}\GuideSetLabel{#1}\label{solution-#1}%
+  {\setlength{\parskip}{0pt}\noindent
+   {\LabelFont\scriptsize\bfseries\color{AccentDark}SOLUTION #1}\hfill
+   {\sffamily\scriptsize\hyperref[problem-#1]{Problem, page~\pageref*{problem-#1}}}\par
+   \vspace{0.4em}{\HeadFont\fontsize{13.5}{17}\selectfont\color{Ink}\raggedright #2\par}}%
+  \vspace{0.3em}}
+% A bold lead-in ("Brute force.") inside a solution.
+\newcommand{\GuideRunIn}[1]{{\HeadSemi\color{AccentDark}#1}}
+
+% ── Code panels ───────────────────────────────────────────────────────────────
+% Long lines wrap with a marker instead of running off the page.
+% pandoc defines Highlighting only when the book has highlighted code; a book
+% with only plain blocks (guide.lua sets those in Highlighting too) needs it here.
+\ifdefined\Highlighting\else\DefineVerbatimEnvironment{Highlighting}{Verbatim}{}\fi
+\RecustomVerbatimEnvironment{Highlighting}{Verbatim}{%
+  commandchars=\\\{\}, fontsize=\fontsize{8.4}{11.2}\selectfont,
+  breaklines=true, breakanywhere=false,
+  breaksymbolleft={\color{Faint}\tiny\ensuremath{\hookrightarrow}},
+  breaksymbolindentleft=0.5em}
+% A problem book keeps any listing that fits on a page in one piece
+% (guide.lua sets \GuideKeepListingtrue around it).
+\newif\ifGuideKeepListing
+\tcbset{
+  guide code/.style={enhanced, breakable, code={\ifGuideKeepListing\tcbset{unbreakable}\fi},
+    colback=Panel, colframe=Panel, arc=2pt, boxrule=0pt,
+    left=10pt, right=8pt, top=7pt, bottom=6pt, before skip=0.75em, after skip=0.9em,
+    before={\par\needspace{4\baselineskip}}},
+  guide code label/.style={overlay unbroken and first={%
+    \ifstrempty{#1}{}{\node[anchor=north east, inner sep=3pt, font=\LabelFont\fontsize{6.5}{7}\selectfont, text=Muted]
+      at ([xshift=-4pt, yshift=-2pt]frame.north east) {\MakeUppercase{#1}};}}},
+  guide code title/.style={top=20pt, overlay unbroken and first app={%
+    \node[anchor=north west, inner sep=0pt, font=\HeadSemi\fontsize{8}{9}\selectfont, text=Ink]
+      at ([xshift=10pt, yshift=-7pt]frame.north west) {#1};
+    \draw[Rule, line width=0.5pt] ([xshift=10pt, yshift=-15.5pt]frame.north west) -- ([xshift=-8pt, yshift=-15.5pt]frame.north east);}},
+}
+% Every code block sits on a warm panel with a thin accent edge and a small
+% language label; a listing that is a whole file carries its file name as a title.
+\newtcolorbox{GuideCode}[1]{guide code, borderline west={2pt}{0pt}{Accent!70},
+  guide code label={#1}}
+\newtcolorbox{GuideCodeTitled}[2]{guide code, borderline west={2pt}{0pt}{Accent!70},
+  guide code label={#1}, guide code title={#2}}
+% Terminal and plain-text blocks use the same panel with a neutral edge.
+\newtcolorbox{GuideOutput}[1]{guide code, borderline west={2pt}{0pt}{Faint},
+  guide code label={#1}}
+\newtcolorbox{GuideOutputTitled}[2]{guide code, borderline west={2pt}{0pt}{Faint},
+  guide code label={#1}, guide code title={#2}}
+
+% ── Callouts ──────────────────────────────────────────────────────────────────
+\newtcolorbox{GuideCallout}[3]{% ink colour, tint colour, label
+  enhanced, breakable, colback=#2, colframe=#2, arc=2pt, boxrule=0pt,
+  left=12pt, right=12pt, top=9pt, bottom=8pt, before skip=1em, after skip=1em,
+  before={\par\needspace{6\baselineskip}},
+  borderline west={3pt}{0pt}{#1},
+  fontupper=\small\raggedright\setlength{\parskip}{0.45em},
+  before upper={{\LabelFont\scriptsize\bfseries\color{#1}\MakeUppercase{#3}}\par\vspace{0.15em}}}
+\newtcolorbox{GuideQuote}{% the Preface's opening passage
+  enhanced, breakable, colback=white, colframe=white, boxrule=0pt, arc=0pt,
+  left=14pt, right=0pt, top=2pt, bottom=2pt, before skip=0.4em, after skip=1.2em,
+  borderline west={2.5pt}{0pt}{Accent},
+  fontupper=\LiningSerif\fontsize{11.5}{17}\selectfont\color{Ink}\setlength{\parskip}{0.7em}}
+% Example sentences in a language-learning book (a blockquote that starts with
+% the target language): the sentence, its romanization, its translation.
+\newtcolorbox{GuideExample}{%
+  enhanced, breakable, colback=white, colframe=white, boxrule=0pt, arc=0pt,
+  left=12pt, right=0pt, top=1pt, bottom=1pt, before skip=0.5em, after skip=0.7em,
+  borderline west={1.5pt}{0pt}{Accent!60},
+  fontupper=\setlength{\parskip}{0.3em}\color{Ink}}
+
+% ── Sidebars ──────────────────────────────────────────────────────────────────
+% "Going Deeper" digressions: optional reading, boxed so a reader can skip them.
+\newtcolorbox{GuideSidebar}[1]{%
+  enhanced, breakable, colback=Panel, colframe=Rule, arc=3pt, boxrule=0.6pt,
+  left=14pt, right=14pt, top=11pt, bottom=10pt, before skip=1.3em, after skip=1.1em,
+  before={\par\needspace{8\baselineskip}},
+  fontupper=\small\setlength{\parskip}{0.45em},
+  before upper={{\LabelFont\scriptsize\color{Muted}GOING DEEPER}\par\vspace{0.1em}%
+    {\HeadSemi\normalsize\color{AccentDark}#1}\par\vspace{0.35em}}}
+
+% ── Section summary ───────────────────────────────────────────────────────────
+\newtcolorbox{GuideSummary}{%
+  enhanced, breakable, code={\ifGuideKeepListing\tcbset{unbreakable}\fi}, colback=AccentTint, colframe=AccentTint, arc=3pt, boxrule=0pt,
+  left=14pt, right=14pt, top=11pt, bottom=10pt, before skip=1.6em, after skip=0.6em,
+  before={\par\needspace{8\baselineskip}},
+  fontupper=\small\setlength{\parskip}{0.35em},
+  before upper={{\HeadFont\normalsize\color{AccentDark}Summary}\par\vspace{0.3em}}}
+
+% ── Figures ───────────────────────────────────────────────────────────────────
+% A diagram and its caption never separate. Numbered per chapter (Figure 3.2).
+\newcounter{GuideFigure}[GuideChapter]
+\newenvironment{GuideFigure}
+  {\par\vspace{0.6em}\noindent\begin{minipage}{\linewidth}\centering}
+  {\end{minipage}\par\vspace{0.8em}}
+\newcommand{\GuideCaption}[1]{%
+  \par\vspace{0.55em}%
+  \stepcounter{GuideFigure}%
+  {\raggedright\small\setlength{\parskip}{0pt}%
+   {\LabelFont\bfseries\scriptsize\color{AccentDark}FIGURE
+    \ifGuideInChapter\arabic{GuideChapter}.\fi\arabic{GuideFigure}}\quad
+   {\color{Muted}#1}\par}}
+
+% ── Index ─────────────────────────────────────────────────────────────────────
+% The heading is set by \GuideLesson, like every other page; imakeidx prints none.
+\newcommand{\GuideNoHeading}[1]{}
+\indexsetup{level=\GuideNoHeading, noclearpage, firstpagestyle=opener,
+  othercode={\sffamily\footnotesize\setlength{\parskip}{0pt}}}
+\newcommand{\GuideIndex}{\GuideInChapterfalse\GuideLesson{Index}{index}\printindex}
+
+% ── Back cover ────────────────────────────────────────────────────────────────
+\newcommand{\GuideBackCover}{%
+  \clearpage\thispagestyle{empty}%
+  \begin{tikzpicture}[remember picture, overlay]
+    \fill[Night] (current page.south west) rectangle (current page.north east);
+    \begin{scope}[shift={(current page.south east)}, xshift=-11cm, yshift=-0.5cm]
+      \clip (0,0) rectangle (11.5cm, 5.5cm);\GuideMotif{NightSoft}{0}{0}{3}
+    \end{scope}
+    \node[anchor=north west, text width=5.5in, inner sep=0pt, align=left]
+      at ([xshift=0.95in, yshift=-1.1in]current page.north west)
+      {\setlength{\parskip}{0.9em}\raggedright
+       {\LabelFont\small\color{AccentBright}\MakeUppercase{\GuideCategory}\par}
+       \vspace{0.2em}{\color{AccentBright}\rule{0.9in}{3pt}}\par\vspace{0.4em}
+       {\LiningSerif\fontsize{12}{18}\selectfont\color{white}\GuideBlurb\par}};
+    \node[anchor=south west, inner sep=0pt, align=left, text width=4.5in]
+      at ([xshift=0.95in, yshift=0.8in]current page.south west)
+      {{\HeadFont\normalsize\spaceskip=0.26em\relax\color{white}\GuideTitle}\par\vspace{3pt}
+       {\LabelFont\scriptsize\color{Faint}\MakeUppercase{\GuideCoverage}}};
+  \end{tikzpicture}}
+
+% ── Tables ────────────────────────────────────────────────────────────────────
+\newcommand{\GuideTableSetup}{%
+  \sffamily\small\setlength{\tabcolsep}{8pt}\renewcommand{\arraystretch}{1.45}%
+  \arrayrulecolor{Rule}\rowcolors{2}{white}{Panel}}
+\let\GuideOrigToprule\toprule
+\renewcommand{\toprule}{\arrayrulecolor{Accent}\specialrule{1pt}{0pt}{0pt}\arrayrulecolor{Rule}}
+\renewcommand{\bottomrule}{\arrayrulecolor{Rule}\specialrule{0.8pt}{0pt}{0pt}}
+
+% ── Glossary ──────────────────────────────────────────────────────────────────
+\newcommand{\GuideGlossaryLetter}[1]{%
+  \par\vspace{1em}\needspace{4\baselineskip}%
+  {\DisplayFont\fontsize{18}{20}\selectfont\color{Accent}#1}\par
+  {\color{Rule}\rule{\linewidth}{0.5pt}}\par\vspace{0.2em}}
