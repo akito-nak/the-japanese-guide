@@ -1,0 +1,89 @@
+{
+  "_comment": "Cover subject lines, profiles and accent colours for every guide category. accent: rules, bullets, code edges; bright: on the Night cover and chapter bands (>= 4.5:1 on #16202E); dark: links and inline code (>= 5.2:1 on white); tint: summary panels. See STYLE.md.",
+  "categories": {
+    "PROGRAMMING": {
+      "profile": "technical",
+      "accent": "#3E8E41",
+      "bright": "#439946",
+      "dark": "#357A38",
+      "tint": "#EEF5EE"
+    },
+    "SOFTWARE ENGINEERING": {
+      "profile": "technical",
+      "accent": "#1F7FB0",
+      "bright": "#238FC6",
+      "dark": "#1C729F",
+      "tint": "#EBF3F8"
+    },
+    "COMPUTER SCIENCE": {
+      "profile": "technical",
+      "accent": "#4F55C4",
+      "bright": "#7B7FD3",
+      "dark": "#4F55C4",
+      "tint": "#EFF0FA"
+    },
+    "ARTIFICIAL INTELLIGENCE": {
+      "profile": "technical",
+      "accent": "#B0388F",
+      "bright": "#CC5EAE",
+      "dark": "#B0388F",
+      "tint": "#F8EDF5"
+    },
+    "CAREER": {
+      "profile": "general",
+      "accent": "#D0573A",
+      "bright": "#D4674D",
+      "dark": "#B8472C",
+      "tint": "#FBF0ED"
+    },
+    "PRODUCT MANAGEMENT": {
+      "profile": "general",
+      "accent": "#12887C",
+      "bright": "#14988A",
+      "dark": "#10786E",
+      "tint": "#EAF4F3"
+    },
+    "PERSONAL FINANCE": {
+      "profile": "general",
+      "accent": "#B8870F",
+      "bright": "#B8870F",
+      "dark": "#8B660B",
+      "tint": "#F9F4E9"
+    },
+    "BUSINESS": {
+      "profile": "general",
+      "accent": "#B32E48",
+      "bright": "#D66178",
+      "dark": "#B32E48",
+      "tint": "#F8ECEF"
+    },
+    "HISTORY": {
+      "profile": "general",
+      "accent": "#8C5A35",
+      "bright": "#B87746",
+      "dark": "#8C5A35",
+      "tint": "#F5F0ED"
+    },
+    "PSYCHOLOGY": {
+      "profile": "general",
+      "accent": "#7E4BB0",
+      "bright": "#9E76C5",
+      "dark": "#7E4BB0",
+      "tint": "#F3EFF8"
+    },
+    "EDUCATION": {
+      "profile": "general",
+      "accent": "#D9801F",
+      "bright": "#D9801F",
+      "dark": "#9D5C16",
+      "tint": "#FCF4EB"
+    },
+    "LANGUAGE": {
+      "profile": "general",
+      "accent": "#2E63C4",
+      "bright": "#5885D8",
+      "dark": "#2E63C4",
+      "tint": "#ECF1FA"
+    }
+  }
+}

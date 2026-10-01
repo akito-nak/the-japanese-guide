@@ -1,0 +1,66 @@
+name: Release PDF
+
+# Push a version tag (for example `git tag v0.1.0 && git push origin v0.1.0`)
+# to build the guide into a single PDF and publish it on the Releases page.
+# Running the workflow by hand builds the PDF as a downloadable artifact only.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+
+      # pandoc is pinned to the version the theme is tested with; Ubuntu's own
+      # package is older than the theme needs.
+      - name: Install pandoc
+        run: |
+          curl -fsSL -o "$RUNNER_TEMP/pandoc.deb" \
+            https://github.com/jgm/pandoc/releases/download/3.9.0.2/pandoc-3.9.0.2-1-amd64.deb
+          sudo apt-get install -y "$RUNNER_TEMP/pandoc.deb"
+
+      - name: Install XeLaTeX and fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-xetex texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-pictures lmodern fonts-dejavu fonts-liberation \
+            texlive-lang-cjk texlive-lang-chinese fontconfig
+
+      - name: Install mermaid-filter (renders ```mermaid diagrams)
+        run: |
+          npm install -g mermaid-filter
+          # Headless Chrome needs --no-sandbox on GitHub's runners.
+          echo '{"args": ["--no-sandbox"]}' > "$RUNNER_TEMP/puppeteer.json"
+          echo "MERMAID_FILTER_PUPPETEER_CONFIG=$RUNNER_TEMP/puppeteer.json" >> "$GITHUB_ENV"
+
+      - name: Build the PDF
+        run: python tools/build_guide_pdf.py --strict --title "The Japanese Guide" --output the-japanese-guide.pdf
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: the-japanese-guide-pdf
+          path: the-japanese-guide.pdf
+
+      - name: Publish the release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" the-japanese-guide.pdf \
+            --title "The Japanese Guide $GITHUB_REF_NAME" \
+            --generate-notes

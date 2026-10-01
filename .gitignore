@@ -1,3 +1,7 @@
-# Ignore stray PDFs, but track the canonical built guide (scripts/build-pdf.sh)
+# ── Guide PDF (built by the build-guide-pdf skill; published as a release asset) ──
+build/
 *.pdf
-!the-japanese-guide.pdf
+mermaid-filter.err
+
+# ── OS ──
+.DS_Store

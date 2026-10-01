@@ -1,0 +1,33 @@
+# The book's identity. The PDF's cover, copyright page, back cover and colours
+# are generated from this file and tools/pdf/categories.json.
+
+title = "The Japanese Guide"
+subtitle = "From First Kana to Real-World Fluency"
+category = "LANGUAGE"             # a key in tools/pdf/categories.json
+language = "ja"                   # Japanese script fonts; practice and answers
+motif = "dots"                    # hexagons | dots
+edition = "First Edition"
+coverage = "Covers the JLPT N5 to N1 and Japanese as spoken in 2026"
+
+trademarks = """
+JLPT and the Japanese-Language Proficiency Test are administered by the Japan
+Foundation and Japan Educational Exchanges and Services. Other product, company
+and broadcaster names in this book may be trademarks of their respective owners;
+they are used only to identify those products, and their use implies no
+affiliation or endorsement.
+"""
+
+blurb = """
+Japanese looks impossible from the outside: three writing systems, verbs at the
+end of every sentence and a politeness system that changes with whoever is in
+the room. From the inside it is logical, playful and deeply rewarding.
+
+This book starts with hiragana and builds steadily: kanji, grammar, core
+vocabulary and the full range of politeness, then the Japanese people actually
+speak, with its dialects, slang and anime voices. It takes you into the culture
+behind the words, from trains and konbini to festivals, baseball and Vtubers,
+and ends with paths for anime and manga fans, news readers, business
+professionals and every level of the JLPT.
+
+Every chapter ends with graded practice, with answers at the back of the book.
+"""
